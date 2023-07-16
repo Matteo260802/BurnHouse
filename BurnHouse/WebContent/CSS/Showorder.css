@@ -28,7 +28,6 @@
 	font-size:20px;
 	display:flex;
 	flex-direction:column;
-
 	overflow:auto;
 	margin-bottom: 20px;
 	
@@ -43,7 +42,7 @@
 	background-image:linear-gradient(to bottom,#DC143C,#FFF0F5);
 	border-top-right-radius:10px;
 	border-top-left-radius:10px;
-	width:42.1%;
+	width:65%;
 	height:10%;
 	padding-top:5px;
 
@@ -88,13 +87,14 @@ div.fattura a:hover {
 	
 /*centro*/	
 .ordercont{
+  width:64%;
   display: flex;
   align-items: center;
   margin:0 auto;
   background-color:#FFF0F5;
   height:80%;
-  width: 100%;
   padding: 10px;
+  
 
 }
 
@@ -132,6 +132,7 @@ width: auto; /* Larghezza automatica per mantenere le proporzioni originali */
 
 /*sotto*/
 .order-total {
+  width:65%;;
   margin: 0 auto;
   border-top-style: solid;
   border-top-width: 3px;
@@ -240,9 +241,7 @@ body{
 }
 
 
-.headorder, .order-total, .ordercont {
-  width: 50%;
-}
+
 
 
 @media screen and (max-width: 800px){
@@ -320,6 +319,9 @@ body{
     font-family: 'Montserrat', sans-serif;
   }
   
+  
 
 }
+
+
 

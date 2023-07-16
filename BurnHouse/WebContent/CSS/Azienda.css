@@ -58,13 +58,10 @@
 	font-size: 20px;
 	border: none;
 	cursor: pointer;
-	trasition: 0.3s ease;
+	transition: 0.3s ease;
 }
 
-.abhero-content button: hover{
-	background-color: #ff6347;
-	transform: scale(1.1);
-}
+
 .abhero-image{
 	flex: 1;
 	width: 600px;
@@ -74,7 +71,7 @@
 
 .abimg{
 	width: 100%;
-	height: auto%;
+	height: auto;
 	border-radius: 10px;
 }
 
@@ -90,7 +87,7 @@
 	}
 	
 	.abcontainer{
-	   widht: 100%;
+	   width: 100%;
 	   flex-direction: column;
 	   margin: 0px;
 	   padding: 0px 40px;

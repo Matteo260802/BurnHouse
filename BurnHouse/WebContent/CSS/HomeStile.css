@@ -64,6 +64,8 @@ Video
 .hero__content a:hover {
   background-color: #d94965;
 }
+
+
 .hero:after{
   content: ' ';
   width: 100%;
