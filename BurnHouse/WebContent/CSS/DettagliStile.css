@@ -1,0 +1,283 @@
+@charset "ISO-8859-1";
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+ 
+.container {
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  min-height: 60vh;
+}
+
+/* Columns */
+.left-column {
+  width: 65%;
+  position: relative;
+}
+ 
+.right-column {
+  width: 35%;
+  margin-top: 6%;
+}
+
+/* Left Column */
+.left-column img {
+  width: 100%;
+  height: 100%; 
+  object-fit: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+ 
+.left-column img.active {
+  opacity: 1;
+}
+
+/* Product Description */
+.product-description {
+  border-bottom: 1px solid #E1E8EE;
+  margin-bottom: 20px;
+}
+.product-description span:not(:last-child) {
+  margin-right: 30px;
+  font-size: 12px;
+  color: #358ED7;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.product-description h1 {
+  font-weight: 300;
+  font-size: 380%;
+  color: #43484D;
+  letter-spacing: -2px;
+}
+.product-description p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #86939E;
+  line-height: 24px;
+}
+
+/* Product Price */
+.product-price {
+  display: flex;
+  align-items: center;
+}
+ 
+.product-price span {
+  font-size: 26px;
+  font-weight: 300;
+  color: #43474D;
+  margin-right: 20px;
+}
+ 
+.cart-btn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #751f3d;
+  border-radius: 4px;
+  
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 15px 20px;
+  transition: background-color 0.3s ease;
+}
+.cart-btn:hover {
+  background-color: #000000;
+}
+
+/* Recensioni */
+.recensione {
+  margin-top: 10%;
+}
+
+.comment-box,
+.post-comment .list {
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 2px 2px #0002;
+}
+
+.comment-session {
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+.post-comment .list {
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.post-comment .list .user {
+  display: flex;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.post-comment .list .user img {
+  height: 38px;
+  width: 38px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.comment-session .name {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.post-comment .list .day {
+  font-size: 12px;
+}
+
+.post-comment .comment-post {
+  padding: 0 0 15px 58px;
+}
+
+/* Comment box */
+.comment-box {
+  padding: 10px;
+  overflow: hidden;
+}
+
+.comment-box .user {
+  display: flex;
+  width: min-content;
+}
+
+.comment-box .image img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.comment-box textarea {
+  background: #eee;
+  width: 100%;
+  height: 152px;
+  margin: 10px 0;
+  padding: 10px;
+  resize: inherit;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 0 0 0.5px #0003;
+  box-sizing: border-box;
+}
+
+.comment-box textarea:focus-visible {
+  box-shadow: inset 0 0 0 1px #009cff;
+  outline: none;
+}
+
+.comment-box .comment-submit {
+  float: right;
+  padding: 6px 10px;
+  border: none;
+  background: #009cff;
+  color: #eee;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.comment-box .comment-submit:hover {
+  background: #0076bf;
+}
+
+.title-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: orange;
+  margin: 10px auto;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  /* Tablet and smaller screens */
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .left-column img {
+    position: static;
+    height: auto;
+    width: 100%;
+  }
+
+  .product-description h1 {
+    font-size: 280%;
+  }
+
+  .comment-session {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* Mobile devices */
+  .product-description h1 {
+    font-size: 180%;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  /* Computer screens */
+  .container {
+    flex-direction: column;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+  }
+
+  .left-column img {
+    position: static;
+    height: auto;
+    width: 100%;
+  }
+
+  .product-description h1 {
+    font-size: 280%;
+  }
+
+  .comment-session {
+    width: 100%;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+}

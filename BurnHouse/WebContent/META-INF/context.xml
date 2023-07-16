@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<Context>
+    <Resource name="jdbc/burn_house"
+        auth="Container"
+        driverClassName="com.mysql.cj.jdbc.Driver"
+        type="javax.sql.DataSource"
+        username="root"
+        password="Cancello1@"
+        url="jdbc:mysql://localhost:3306/burn_house?useUnicode=true&amp;useJDBCCompliantTimezoneShift=true&amp;useLegacyDatetimeCode=false&amp;serverTimezone=UTC"/>
+        
+</Context>

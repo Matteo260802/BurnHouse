@@ -1,0 +1,179 @@
+div.linea {
+  /*padding: 1px 1px 1px 1px;
+  text-align: center;
+  background: #333;
+  color: white;*/
+    font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 13px;
+    text-align: center;
+    color: white;
+    font-weight: normal;
+    line-height: 2;
+    letter-spacing: normal;
+    font-style: normal;
+    background-color: black;
+}
+/*
+body { 
+  background-color: #b5a789;
+  font-family:      Georgia, "Times New Roman", Times, serif;
+  font-size:        small;
+  margin:           0px;
+}
+*/
+
+Header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #751f3d; 
+}
+
+
+
+#zonaleft img {
+     width: 80px; /* Imposta la larghezza dell'immagine a 300 pixel */
+     height: auto; /* Imposta l'altezza dell'immagine a 150 pixel */
+}
+
+#search-box-input {
+  width: 600px;/*600*/
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-left: 75px;/*nuovo*/
+}
+
+#zonaright a{
+	margin-left: 20px;
+  font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 14px;
+  color: black;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: normal;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#zonaright a:hover {
+	margin-left: 20px;
+    font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+    font-size: 14px;
+    color: red;
+    font-weight: 600;
+    line-height: 48px;
+    letter-spacing: normal;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+/*
+
+#zonaright a:link { 
+  margin-left: 20px;
+  font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 14px;
+  color: black;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: normal;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#zonaright a:hover { 
+  margin-left: 20px;
+  font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+  font-size: 14px;
+  color: red;
+  font-weight: 600;
+  line-height: 48px;
+  letter-spacing: normal;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+*/
+
+.menu{
+background-color: #751f3d;
+margin: 0;
+display: flex;
+justify-content: center;
+}
+
+.menu__list {
+margin: 0;
+padding: 0;
+list-style: none;
+display: flex;
+justify-content: center;
+}
+
+.menu__item {
+margin: 0;
+padding: 0 20px;
+}
+
+.menu__link {
+display: block;
+font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+font-size: 14px;
+font-weight: 600;
+line-height: 48px;
+letter-spacing: normal;
+font-style: normal;
+text-align: center;
+text-transform: uppercase;
+text-decoration: none;
+color: #fff;
+transition: color 0.3s ease-in-out;
+}
+
+.menu__link:hover {
+color: red;
+}
+
+h2 { font-size: 130%; }
+
+
+/* CSS per le icone*/
+.header-icons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.icon-link:hover {
+  color: #000;
+}
+
+.icon-link i {
+  font-size: 24px;
+}
+
+.icon-link span {
+  font-size: 14px;
+  margin-top: 5px;
+  text-align: center;
+}
+            
+
+

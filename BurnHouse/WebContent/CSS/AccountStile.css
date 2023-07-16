@@ -1,0 +1,287 @@
+@charset "ISO-8859-1";
+body{
+	background-color: #f3f3f3;
+}
+    
+    corpo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+    
+    
+	   .foto {
+	    display: flex;
+	    justify-content: center;
+	    margin-bottom: 20px;
+	  }
+	
+	  .foto img {
+	    width: 20%;
+	    height: 20%;
+	  }
+    
+    .dettagli {
+	    display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 50px; /* Aggiungi la distanza orizzontale desiderata */
+  		grid-row-gap: 10px; /* Aggiungi la distanza verticale desiderata */
+	  }
+	  
+	.sinistra {
+	  display: flex;
+	  flex-direction: column;
+	  align-items: center;
+	}
+
+	.destra {
+	  display: block;
+	  justify-content: center;
+	  margin-top: 15%;
+	}
+	  
+
+	  
+    .account-details {
+  	  margin-right:auto;
+  	  margin-left:auto;
+      background-color: #fff;
+      padding: 20px;
+      height: 100%;
+      width: 1600px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .account-details h1 {
+      text-align: center;
+      color: #333333;
+    }
+    
+    .account-details h2 {
+      color: #555555;
+    }
+    
+    .account-details p {
+      color: #888888;
+    }
+    
+    
+    
+.ordini {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ordini a {
+  text-decoration: none;
+  background-color: #751f3d;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.ordini a:hover {
+  background-color: #bf3364;
+}    
+    
+.exit-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.exit-button a {
+  text-decoration: none;
+  background-color: #751f3d;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.exit-button a:hover {
+  background-color: #bf3364;
+}
+
+a.info{
+	color:black;
+	text-decoration:none;
+	font-size: 16.5px;
+}
+
+a.info:hover{
+	color:red;
+	text-decoration:none;
+	/*font-style:italic;*/
+}
+
+
+.title-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: orange;
+  margin: 10px auto;
+}
+    
+    
+    
+.rectangle {
+  width: 200px;
+  height: 20px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+
+.contenutorect{
+  text-align: left;
+  margin-left: 6px;
+  margin-top: 1.5px;
+  color: #495057;
+}
+
+.nome h2{
+	font-size: 19px;
+}
+
+.cognome h2{
+	font-size: 19px;
+}
+
+.email h2{
+	font-size: 19px;
+}
+
+.datanascita h2{
+	font-size: 19px;
+}
+
+
+.collegamenti{
+	margin-top: 70px;
+}
+
+.allin{
+	display: flex;
+	max-width: 1140px;
+    margin-right:auto;
+  	  margin-left:auto;
+    margin-bottom: 40px;
+}
+
+.opzioni{
+	background-color: #ffffff;
+    border-right: 1px solid #dee2e6!important;
+    height: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 35%;
+}
+
+.corpo{
+	background-color: #F2F4F8;
+}
+  
+.pagamento{
+	display: flex;
+	margin-bottom: 20px;
+}
+
+.pagamento:hover{
+	color: red;
+}
+
+.pagamento .icona{
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+/* Stile per smartphone */
+@media screen and (max-width: 600px) {
+  .account-details {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .foto img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .dettagli {
+    grid-template-columns: 1fr;
+  }
+  
+  .sinistra,
+  .destra {
+    margin-top: 0;
+  }
+  
+  .ordini,
+  .exit-button {
+    margin-top: 10px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .line {
+    width: 50px;
+  }
+  
+  .opzioni {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .account-details {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .foto img {
+    width: 50%;
+    height: auto;
+  }
+  
+
+  
+  .sinistra,
+  .destra {
+    margin-top: 0;
+  }
+  
+  .ordini,
+  .exit-button {
+    margin-top: 10px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .line {
+    width: 50px;
+  }
+  
+  .opzioni {
+    width: 50%;
+  }
+}

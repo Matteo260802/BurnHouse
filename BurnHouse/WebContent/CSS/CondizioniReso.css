@@ -1,0 +1,36 @@
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #888;
+}
+
+#page-title{
+	font-weight: 600;
+    line-height: 48px;
+    letter-spacing: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+
+}
+
+
+#page-body{
+	font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+	max-width: 900px;
+    margin: auto;
+    border: 1px solid #eee;
+    background-color: #fff;
+    padding: 20px;
+    line-height: 26px;
+}
+
+#page-body b{
+	font-weight: bold;
+    color: black;
+}

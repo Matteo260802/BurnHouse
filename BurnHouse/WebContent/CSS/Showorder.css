@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+#vuoto{
+	margin:0 auto;
+	display:block;
+	
+}
+
+#riempi{
+	text-align:center;
+	font-size:30px;
+}
+
+
+#compra{
+	display:block;
+	margin:10px auto 0 auto;
+	font-size:25px;
+	background-color:#751f3d;
+	margin-top: 20px;
+	color: #ffffff;
+}
+
+
+
+#riepilogoordini{
+	font-family:'Helvetica',sans-serif;
+	font-size:20px;
+	display:flex;
+	flex-direction:column;
+	margin: 0 auto;
+	overflow:auto;
+	
+}
+
+.headorder{
+	display:block;
+	margin-top:20px;
+	margin-bottom:0px;
+	margin-left:auto;
+	margin-right:auto;
+	background-image:linear-gradient(to bottom,#DC143C,#FFF0F5);
+	border-top-right-radius:10px;
+	border-top-left-radius:10px;
+	width:42.1%;
+	height:10%;
+	padding-top:5px;
+
+}
+
+.number{
+	text-align:right;
+	display:inline;
+	float:right;
+	padding-right:10px;
+	
+}
+
+.date{
+	float:left;	
+	font-family:'Montserrat', sans-serif;
+	padding-left:10px;
+	
+	
+}
+
+.acq{
+	margin-left:55px;
+	}
+	
+.ordercont{
+	margin:0 auto;
+	background-color:#FFF0F5;
+	width:40%;
+	height:80%;
+	padding:20px;
+}
+
+
+.about{
+	font-size:20px;
+	color:black;
+	font-family:'Montserrat', sans-serif;
+}
+
+.orderimg{
+	float:left;
+	width:10%;
+	height:10%;
+}
+
+
+.price{
+	float:right;
+	line-height:1.5;
+	font-family:'Montserrat', sans-serif;
+}
+
+.order-total{
+	padding-left:36.02%;
+	margin:0 auto;
+	border-top-style:solid;
+	border-top-width:3px;
+	background-color:#FFF0F5;
+	border-bottom-right-radius:10px;
+	border-bottom-left-radius:10px;
+	padding-bottom:10px;
+	padding-top:10px;
+	font-family:'Montserrat', sans-serif;
+	font-size:18px;
+}
+
+
+.ordercont a:link, #compra a:link{
+	text-decoration:none;
+	color:#ffffff;
+}
+
+.ordercont a:visited, #compra a:visited{
+	text-decoration:none;
+	color:#ffffff;
+}
+
+.ordini {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.ordini a {
+  text-decoration: none;
+  background-color: #751f3d;
+  color: #ffffff;
+  padding: 1% 2%;
+  border-radius: 5px;
+}
+
+.ordini a:hover {
+  background-color: #bf3364;
+}  
+
+
+body{
+	max-width: 100%;
+    overflow-x: hidden;
+    background-color: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+    color: #000000;
+}
+
+
+
+.contenitor {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3f3f3;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #2c2f48;
+  margin-bottom: 20px;
+}
+
+
+
+/*di prova*/
+/* CSS styles */
+
+.container{
+	display: flex;
+	justify-content: center;
+	height: 376px;
+	margin-top: 40px;
+}
+
+.water{
+    width: 250px;
+    height: 250px;
+    background-color: #5E2129;
+    border-radius: 50%;
+    position: relative;
+    border: 2px solid #000;
+    overflow: hidden;
+}
+.water:before, .water:after{
+    content:'';
+    position: absolute;
+    width:200%;
+    height: 200%;
+    top: -50%;
+    left: 50%;
+    background: #fff;
+}
+.water:before{
+    border-radius: 45%;
+    background:#fff;
+    animation:wave 5s linear infinite;
+}
+.water:after{
+    border-radius: 35%;
+    background:rgba(255,255,255,.3);
+    animation:wave 5s linear infinite;
+}
+
+/*
+@keyframes wave{
+    0%{
+        transform: translate(-50%, -50%) rotate(0);
+        top: -30%;
+    }
+    50%{
+    	top: -50%;
+    }
+    100%{
+        transform: translate(-50%, -50%)  rotate(360deg);
+        top: -30%;
+    }
+}
+*/
+
+
+@keyframes wave{
+    0%{
+        transform: translate(-50%, -50%) rotate(0);
+        top: -10%;
+    }
+    50%{
+    	top: -20%;
+    }
+    100%{
+        transform: translate(-50%, -50%)  rotate(360deg);
+        top: -10%;
+    }
+}
+

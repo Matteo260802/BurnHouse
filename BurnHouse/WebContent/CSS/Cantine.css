@@ -1,0 +1,105 @@
+#abpage-body{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+    font-family: "Arial", sans-serif;
+    background-color: #F2F4F8;
+}
+
+
+
+
+.title-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #F2F4F8;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: orange;
+  margin: 10px auto;
+}
+
+
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Imposta colonne flessibili */
+  background-color: #F2F4F8;
+  padding: 20px 90px 20px 90px;
+
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 2px 4px 8px rgba(0,0,0,.1);
+  padding: 20px;
+  font-size: 20px;/30px/
+  text-align: center;
+  aspect-ratio: 1/1;
+  display: flex; /* Add flex display */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  margin: 0px 0px 30px 16px;
+  
+}
+
+.grid-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; 
+}
+
+.grid-item:hover {
+  transform: translateY(-2%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, 0.2);
+}
+
+
+
+#title-cantine{
+	    font-size: 24px;
+    font-weight: 900;
+    line-height: 29px;
+    margin-bottom: 30px;
+}
+
+.banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.banner__copy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+
+.banner__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
+
+section.banner.clearfix{
+	width:100%;
+}

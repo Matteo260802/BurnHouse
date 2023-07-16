@@ -1,0 +1,414 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #202020;
+}
+
+.CartUser{
+ margin:0;
+ padding:0;
+ background:linear-gradient(to bottom right, rgb(255, 255, 255), rgb(255, 255, 255));
+ height: 100vh;
+ display: flex;
+ justify-content:center;
+ align-items: center;
+ 
+}
+.Cart-Container{
+ width:80%;
+ height:85%;
+ background-color:#ffffff;
+ border-radius:20px;
+ box-shadow:0px 25px 40px rgb(255, 255, 255);
+ overflow-y:hidden;
+
+}
+
+.Header{
+ margin: auto;
+ width: 90%;
+ height: 15%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.Heading{
+ font-size: 40px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 700;
+ color: #2F3841;
+}
+.Action{
+ font-size: 28px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 600;
+ color: #E44C4C;
+ cursor: pointer;
+}
+
+.Action a {
+  text-decoration: none;
+  color: #E44C4C;
+}
+
+.Cart-Items{
+ margin: auto;
+ width: 90%;
+ height: 50%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+
+
+
+.image-box{
+ width: 15%;
+ height:100%;
+ text-align: center;
+ display:flex;
+ flex-direction:column;
+}
+
+.cart-img{
+	width:100%;
+	height:80%;
+}
+
+.about{
+ height: 100%;
+ display:flex;
+ flex-direction:column;
+ align-items:left;
+}
+
+.title{
+ padding-top: 5px;
+ line-height: 13px;
+ font-size: 30px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 800;
+ color: #202020;
+}
+
+.title a {
+  text-decoration: none;
+  color: #202020;
+}
+
+.subtitle{
+ line-height: 10px;
+ font-size: 18px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 600;
+ color: #909090;
+}
+
+.counter{
+ width: 15%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-direction:row;
+}
+.btn{
+ width: 40px;
+ height: 40px;
+ border-radius: 50%;
+ background-color: #d9d9d9;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 20px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight:900;
+ color:#202020;
+ cursor:pointer;
+}
+.count{
+ font-size: 20px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 900;
+ color: #202020;
+ align-items:center;
+}
+
+.prices{
+ height: 100%;
+ text-align: right;
+}
+
+.prices a {
+  text-decoration: none;
+  color: #E44C4C;
+}
+
+.amount{
+ padding-top: 20px;
+ font-size: 26px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 800;
+ color: #202020;
+ align-items:center;
+}
+
+.remove{
+ padding-top: 5px;
+ font-size: 14px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 600;
+ color: #E44C4C;
+ cursor: pointer;
+}
+
+.Cart-Line{
+ width: 66%;
+ clear: both;
+ margin-right: 5%;
+}
+.checkout{
+ float: right;
+ margin-right: 5%;
+ 
+ width: 28%;
+ margin-bottom:5%;
+}
+.total{
+ width: 100%;
+ display: flex;
+ justify-content: space-between;
+}
+.Subtotal{
+ font-size: 22px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 700;
+ color: #202020;
+}
+.items{
+ font-size: 16px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 500;
+ color: #909090;
+ line-height: 10px;
+}
+.total-amount{
+ font-size: 36px;
+ font-family: 'Montserrat', sans-serif;
+ font-weight: 900;
+ color: #202020;
+}
+
+.checkout-btn{
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #751f3d;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 30px;
+  transition: background-color 0.3s ease;
+}
+
+
+a:hover {
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  border-color: #2e6da4;
+  background-color: #ddd;
+  color: black;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+  text-decoration: none;
+}
+
+.empty-cart img#emptyCartImage {
+  width: 30% !important;
+  display: block;
+  margin: 0 auto;
+}
+
+.empty-cart {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.empty-cart p {
+  
+	color: #000000; font-size: 48px;  padding-bottom: 10px;
+	
+  margin-bottom: 10px;
+  margin-left: 55px; /* Aggiungi uno spazio a sinistra */
+  margin-right: 10px;
+}
+
+.empty-cart .button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #751f3d;
+  color: #FFFFFF;
+  border: none;
+  transition: background-color 0.3s ease;
+  margin-left: 55px; /* Aggiungi uno spazio a sinistra */
+  margin-right: 10px;
+  margin-bottom: 10%;
+}
+
+.button:hover{
+	 background-color: #751f3d;
+}
+
+
+
+.footer {
+  margin-top: 200px; /* Aggiungi uno spazio di 20px tra il footer e gli elementi sopra di esso */
+}
+
+
+
+@media only screen and (max-width:1280px){
+	.Cart-Container{
+	width:90%;
+	height:85%;
+	}
+	.Cart-Items{
+	width:95%;
+	height:50%;
+	}
+	
+	.Heading{
+	font-size: 30px;
+	}
+	
+	.title{
+	padding-left:20px;
+	font-size:20px;
+	line-height:20px;
+	}
+	
+	.Action{
+	font-size:20px;
+	}
+	
+	.total-amount{
+	font-size:20px;
+	width:50%;
+	}
+	
+	.image-box{
+	width:15%;
+	height:60%;
+	}
+	
+	.cart-img{
+	height:65%;
+	width:80%;
+	}
+	
+	.subtitle{
+	text-align:center;}
+
+}
+@media only screen and (max-width:720px){
+	
+	.Cart-Container{
+	width:90%;
+	height:85%;
+	overflow-y:scroll;
+	}
+	
+	.Cart-Items{
+	width:80%;
+	height:50%;
+	}
+
+	.Heading{
+	font-size:20px;
+	height:70%;
+	}
+	
+	.Action{
+	height:70%;
+	font-size:20px;
+	}
+	
+	.about{
+	align-items:center;
+	}
+	
+	.title{
+	font-size:13px;
+	}
+	
+	.subtitle{
+	font-size:13px;
+	}
+	
+	.total-amount{
+	font-size:20px;
+	width:50%;
+	text-align:right;
+	}
+	
+	.image-box{
+	width:10%;
+	height:50%;
+	align-items:left;
+	}
+	
+	.cart-img{
+	width:180%;
+	height:90%;
+	}
+	
+	.btn{
+	width:20px;
+	height:20px;
+	}
+	
+
+	.count{
+	font-size:15px;
+	font-weight:600;
+	}
+	
+	.footer{
+	width:95%;
+	height:30%;
+	}
+
+}

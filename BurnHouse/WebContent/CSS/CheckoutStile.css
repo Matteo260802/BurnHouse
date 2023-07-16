@@ -1,0 +1,387 @@
+body{
+	font-family: "Open Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
+	background-color: #F2F4F8;
+}
+
+
+
+
+
+#Checkout{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+  color: #2c2f48;
+   margin-bottom: 40px;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+#check{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+}
+
+#Cart{
+	width:100%;
+	heigth:100%;
+  	margin-right:100px;
+	border-radius:10px;
+	background-color: #f9f9f9;
+	
+}
+
+.Cart-Items{
+	/*
+ width: 95%;
+ height: 40%;
+ */
+ /*
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ */
+  align-items: center;
+  margin-bottom: 10px;
+  width: 1200px;
+height: 150px;
+display: flex;
+ 
+}
+
+
+
+.image-box{
+ text-align: center;
+ display:flex;
+ margin-left: 10px;
+ width: auto;
+ height: 150px;
+ 
+   display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.cart-img{
+	width: 150px;
+    height: 150px;
+	
+	
+	display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about{
+
+ display:flex;
+ flex-direction:column;
+ margin-top: 20px;
+text-align: left;
+width: 400px;
+}
+
+/*
+.title{
+ padding-top: 5px;
+ line-height: 13px;
+ font-size: 30px;
+ font-family: 'Open Sans';
+ font-weight: 800;
+ color: #202020;
+}
+*/
+
+.about .title{
+	font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.subtitle{
+	/*
+ line-height: 10px;
+ font-size: 18px;
+ font-family: 'Open Sans';
+ font-weight: 600;
+ color: #909090;
+ */
+ margin-top: 5px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #888;
+}
+
+.counter{
+	/*
+ width: 15%;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ flex-direction:column;
+ font-family:'Open-sans';
+ */
+ /*
+ height: 100%;
+ display:flex;
+ flex-direction:column;
+ align-items:left;
+ */
+ height: 100%;
+ display:flex;
+ flex-direction:column;
+ align-items:right;
+ 
+}
+.count{
+text-align: center;
+margin-top: 19px;
+font-size: 16px;
+}
+
+.provaprices{
+ height: 100%;
+ display:flex;
+ flex-direction:column;
+ align-items:right;
+ margin-left: 100px;
+}
+
+
+
+
+
+.amount{
+ padding-top: 20px;
+ font-size: 16px;
+ font-family: 'Open Sans';
+ font-weight: 800;
+ color: #202020;
+ text-align: center;
+}
+
+.checkout{
+	
+ float: right;
+ margin-right: 85px;
+ width: 28%;
+ margin-bottom:5%;
+ 
+ 
+}
+.total{
+ width: 100%;
+ display: flex;
+ gap: 37px;
+}
+.Subtotal{
+ font-size: 22px;
+ font-family: 'Open Sans';
+ font-weight: 700;
+ color: #202020;
+}
+.items{
+ font-size: 16px;
+ font-family: 'Open Sans';
+ font-weight: 500;
+ color: #909090;
+ line-height: 10px;
+ margin-left: 1px;
+margin-top: 1px;
+}
+.total-amount{
+ font-size: 22px;
+ font-family: 'Open Sans';
+ font-weight: 900;
+ color: #202020;
+}
+
+
+h2.riepilogo{
+	text-align:center;
+	font-size:35px;
+	margin-bottom:20px;
+}
+
+
+.indirizzi, .Metodi{
+	width:70%;
+	height:50%;
+	display:list;
+
+	flex-wrap:wrap;
+	justify-content:center;
+	font-size:20px;
+	margin:0 auto;
+	border-style:dotted;
+	margin-left: 50px;
+	margin-top: 100px;
+}
+
+input[type="radio"]{
+	display:none;
+}
+
+.MHead, .IHead{
+	font-weight: bold;
+  display: inline-block;
+  background-color: black;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 200px;
+  text-decoration: none;
+  margin-left: 120px;
+}
+
+.indirizzo, .metodo{
+	margin-bottom:20px;
+	display:block;
+	font-size:30px;
+	text-align:center;
+	line-height:1.5;
+	
+}
+
+form#checkmate{
+	display:flex;
+	flex-direction:row;
+	border-radius:10px;
+}
+
+#concludi{
+	position:absolute;
+	top:200px;
+	right:50px;
+	height:5%;
+	width:7%;
+	font-size:20px;
+	color:white;
+	background-color:#751f3d;
+	border-radius:10px;
+	font-size: 17px;
+}
+
+#concludi:hover {
+  background-color: red;
+}
+
+
+input[type="radio"]:checked + label::after{
+	content:url(../Immagini/spunta-verde.png);
+}
+
+
+
+
+.title-container {
+  text-align: center;
+  padding: 20px;
+  background-color: #F2F4F8;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.line {
+  width: 100px;
+  height: 2px;
+  background-color: orange;
+  margin: 10px auto;
+}
+  
+.line-check {
+  height:1px;
+  width:100%;
+  margin-top:10px;
+  margin-bottom:10px;
+  background:#ddd;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+
+.quantita{
+	font-family: 'Open-sans';
+    color: #4488dd;
+    font-size: 20px;
+}
+
+.provaprices .prezzo{
+	font-family: 'Open-sans';
+    color: #4488dd;
+    font-size: 20px;
+}
+
+
+
+.ins {
+	/*
+  display: inline-block;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+  */
+  
+  font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 10px 20px 5px 20px;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+
+.ins {
+  display: inline-block;
+  background-color: #751f3d;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: 120px;
+}
+
+.ins:hover {
+  background-color: red;
+}
+
+.ins .vai {
+  color: white;
+  text-decoration: none; 
+  font-size: 15px;
+}
+
+.ins .vai:hover {
+  text-decoration: none;
+}
+
+h1{
+	text-decoration: none; 
+  font-size: 20%;
+}
