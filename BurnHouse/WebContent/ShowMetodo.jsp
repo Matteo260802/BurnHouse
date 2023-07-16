@@ -9,7 +9,10 @@
 <link rel="stylesheet" type="text/css" href="./CSS/ShowMetodopagamento.css">
 </head>
 <body>
+
 <%@include file="Header.jsp" %>
+
+<h1 class="title">Di seguito troverai la lista con i metodi di pagamento che hai salvato sul sito</h1>
 <% 
 	Collection<?> metodi=(Collection<?>)request.getSession().getAttribute("metodi"); 
 	

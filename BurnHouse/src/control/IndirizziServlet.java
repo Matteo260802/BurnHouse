@@ -69,6 +69,7 @@ public class IndirizziServlet extends HttpServlet {
 				request.getSession().setAttribute("spedizioni", indirizzi);
 				RequestDispatcher disp=getServletContext().getRequestDispatcher("/ShowIndirizzo.jsp");
 				disp.forward(request, response);
+				return;
 			} catch (Exception e) {
 				response.sendRedirect("GeneralError.jsp");
 			}

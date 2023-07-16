@@ -9,6 +9,8 @@
 </head>
 <body>
 <%@include file="Header.jsp" %>
+
+<h1 class="title">Di seguito troverai la lista con gli indirizzi di spedizione che hai salvato sul sito</h1>
 <% 
 	Collection<?> indirizzi=(Collection<?>)request.getSession().getAttribute("spedizioni"); 
 	
@@ -63,7 +65,9 @@ IndirizzoBean ind=(IndirizzoBean)it.next();%>
 
 </div>
 
+<footer id="footer">
 <%@include file="Footer.jsp"%>
+</footer>
 
 
 </body>
