@@ -11,31 +11,59 @@ Video
 .hero {
   position: relative;
   height: 80vh;
-  display: flex; width: 100%;align-items: center;
-  background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0, 0.9)),
-   url('bg-video.png') no-repeat center center;
-  background-size: cover;
+  display: flex;
+  align-items: center;
   overflow: hidden;
 }
 
 #video-back {
-  position:absolute;
-  bottom:0;
-  left:0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero__content {
-  width: 100%;
-  max-width: 1350px;
-  margin: 0 auto;
-  padding: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
   z-index: 1;
-  position: relative;
 }
 
+.hero__content p,
+.hero__content h1,
+.hero__content a {
+  color: #000;
+}
+
+.hero__content p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.hero__content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero__content a {
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: #c02846;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.hero__content a:hover {
+  background-color: #d94965;
+}
 .hero:after{
   content: ' ';
   width: 100%;

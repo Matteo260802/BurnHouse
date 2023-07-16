@@ -26,7 +26,7 @@
 
   <body>
       <div class= "linea">
-      <h2>Consegna in Italia in 1 - 3 giorni lavorativi | gratuita oltre i 49,90€ </h2>
+      <h2>Consegna in Italia in 1 - 3 giorni lavorativi | spedizione gratuita </h2>
       </div>
 
       <header>

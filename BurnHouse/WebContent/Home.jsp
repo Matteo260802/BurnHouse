@@ -80,7 +80,7 @@
 		<img class="card__image"src="${pageContext.request.contextPath}/Immagini/vini.jpg" style="width:100%;" alt="Nature">
 		</div>
 		<div class="banner__copy">
-			<div class="banner__copy__text">
+			<div class="banner_copy_text">
 			</div>
 		</div>
 	</section>
@@ -146,7 +146,7 @@
 		<img class="card__image"src="${pageContext.request.contextPath}/Immagini/liquori.png" style="width:100%;" alt="Nature">
 		</div>
 		<div class="banner__copy">
-			<div class="banner__copy__text">
+			<div class="banner_copy_text">
 				<!--  <h3>Liquori italiani</h3>-->
 			</div>
 		</div>
@@ -205,7 +205,7 @@
 		<img class="card__image"src="${pageContext.request.contextPath}/Immagini/distillati.jpg" style="width:100%;" alt="Nature">
 		</div>
 		<div class="banner__copy">
-			<div class="banner__copy__text">
+			<div class="banner_copy_text">
 				<!--  <h3>Distillati italiani</h3>-->
 			</div>
 		</div>
@@ -399,4 +399,3 @@ document.addEventListener("DOMContentLoaded", function() {
      
 </body>
 </html>
-
