@@ -49,10 +49,12 @@ $(document).ready(function(){
 		while(it.hasNext()){
 		Orderbean order=(Orderbean)it.next();%>
 		<div class="headorder"><span class="acq">Acquirente: <%=order.GetUser() %>
-			</span><h3 class="number">Ordine n.<%=order.GetCode() %>
+			</span><div class="number">Ordine n.<%=order.GetCode() %>
 			<br>
+			<div class="fattura">
 			<a href="Fattura.jsp?code=<%=order.GetCode() %>&data=<%=order.GetDate()%>&nome=<%=request.getSession().getAttribute("nome")%>&cognome=<%=request.getSession().getAttribute("cognome")%>&nOrdine=<%=order.GetCode() %>">Fattura</a>
-			</h3>
+			</div>
+			</div>
 			<span class="date">Data effettuazione:<br><%=order.GetDate() %></span>
 		</div>
 		<%Collection<CartProduct> prodorder=(Collection<CartProduct>)tutto.get(order.GetCode()); 
@@ -62,10 +64,11 @@ $(document).ready(function(){
 				<div class="ordercont">
 				
 				
-				
+							
 					<a href ="Dettagli.jsp?id=<%=prod.GetCode()%>" target="_blank" rel="noopener">
 						<img src="${pageContext.request.contextPath}/Immagini/<%=prod.GetImage()%>" alt="Immagine non disponibile" class="orderimg">
 					</a>
+				
 					
 					<h3 class="about">
 						<a href ="Dettagli.jsp?id=<%=prod.GetCode()%>" target="_blank" rel="noopener"><%=prod.GetNome()%></a>
@@ -88,8 +91,6 @@ $(document).ready(function(){
 		</div>
 		<%}} %>
 	</div>
-<footer>
-<%@include file="Footer.jsp" %>
-</footer>
+
 </body>
 </html>
