@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+body {
+	height: 100%;
+	margin: 0;
+}
+
+.page-container {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+.contenitor {
+	flex-grow: 1; /* Grow to fill remaining vertical space */
+}
+
+footer {
+	flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
+
 #vuoto{
 	margin:0 auto;
 	display:block;
@@ -117,8 +137,8 @@ div.fattura a:hover {
 
 
 .orderimg {
-width: auto; /* Larghezza automatica per mantenere le proporzioni originali */
-  height: 150px; /* Imposta l'altezza desiderata per tutte le immagini */
+  width: 300px; /* Larghezza automatica per mantenere le proporzioni originali */
+  height: 300px; /* Imposta l'altezza desiderata per tutte le immagini */
   margin-right: 10px;
 }
 
@@ -169,6 +189,7 @@ width: auto; /* Larghezza automatica per mantenere le proporzioni originali */
   color: #ffffff;
   padding: 1% 2%;
   border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .ordini a:hover {
@@ -296,7 +317,11 @@ body{
   text-align: center; /* Centra il testo dell'acquirente */
 }
 
-
+.orderimg {
+  width: 150px; /* Larghezza automatica per mantenere le proporzioni originali */
+  height: 150px; /* Imposta l'altezza desiderata per tutte le immagini */
+  margin-right: 10px;
+}
   
   .ordercont {
     width: 100%;

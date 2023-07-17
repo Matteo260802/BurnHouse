@@ -33,6 +33,9 @@ $(document).ready(function(){
 </div>
 <%} %>
 
+<div class="page-container">
+	<div class="contenitor">
+
 <% HashMap<?,?> tutto=(HashMap<?,?>)request.getSession().getAttribute("prodorder");
   Collection<?> ordini=(Collection<?>)request.getSession().getAttribute("ordini");
   
@@ -91,6 +94,9 @@ $(document).ready(function(){
 		</div>
 		<%}} %>
 	</div>
+			</div>
+	<%@include file="Footer.jsp" %>
+</div>
 
 </body>
 </html>

@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.contenitor {
+  flex-grow: 1; /* Grow to fill remaining vertical space */
+}
+
+footer {
+  flex-shrink: 0; /* Prevent footer from shrinking */
+}
+
 #vuoto{
 	margin:0 auto;
 	display:block;
@@ -18,8 +38,7 @@
 	font-size:25px;
 	background-color:#751f3d;
 	margin-top: 20px;
-	color: #ffffff;
-	margin-bottom: 100px;
+	color: #000000;
 }
 
 
@@ -29,11 +48,11 @@
 	font-size:20px;
 	display:flex;
 	flex-direction:column;
-	margin: 0 auto;
 	overflow:auto;
+	margin-bottom: 20px;
 	
 }
-
+/*sopra*/
 .headorder{
 	display:block;
 	margin-top:20px;
@@ -43,10 +62,26 @@
 	background-image:linear-gradient(to bottom,#DC143C,#FFF0F5);
 	border-top-right-radius:10px;
 	border-top-left-radius:10px;
-	width:42.1%;
+	width:65%;
 	height:10%;
 	padding-top:5px;
 
+}
+
+
+div.fattura a {
+  text-decoration: none;
+  color:black;
+  font-family:'Montserrat', sans-serif;
+}
+
+div.fattura a:visited {
+  color: #000; /* Sostituisci con il colore desiderato */
+  text-decoration: none;
+}
+
+div.fattura a:hover {
+  color: red; /* Sostituisci con il colore desiderato */
 }
 
 .number{
@@ -54,73 +89,92 @@
 	display:inline;
 	float:right;
 	padding-right:10px;
+	font-family:'Montserrat', sans-serif;
 	
 }
 
-.date{
-	float:left;	
-	font-family:'Montserrat', sans-serif;
-	padding-left:10px;
-	
-	
+.date {
+  float: left;
+  font-family: 'Montserrat', sans-serif;
+  padding-left: 10px;
+  white-space: nowrap; /* Impedisce il testo di andare a capo */
 }
 
 .acq{
 	margin-left:55px;
+	font-family:'Montserrat', sans-serif;
 	}
 	
+/*centro*/	
 .ordercont{
-	margin:0 auto;
-	background-color:#FFF0F5;
-	width:40%;
-	height:80%;
-	padding:20px;
+  width:64%;
+  display: flex;
+  align-items: center;
+  margin:0 auto;
+  background-color:#FFF0F5;
+  height:80%;
+  padding: 10px;
+  
+
+}
+
+.about {
+  flex-grow: 1; /* Permette al testo di espandersi e occupare lo spazio rimanente */
+  font-size: 20px;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.price {
+  text-align: right;
+  width: 20%;
+  float: right;
+  line-height: 1.5;
+  font-family: 'Montserrat', sans-serif;
+  white-space: nowrap; /* Impedisce il testo di andare a capo */
 }
 
 
-.orderimg{
-	float:left;
-	width:10%;
-	height:10%;
+
+.orderimg {
+  width: 300px; /* Larghezza automatica per mantenere le proporzioni originali */
+  height: 300px; /* Imposta l'altezza desiderata per tutte le immagini */
+  margin-right: 10px;
 }
 
-.about{
-	font-size:20px;
-	color:black;
-	font-family:'Montserrat', sans-serif;
+.about {
+  flex-grow: 1; /* Permette al testo di espandersi e occupare lo spazio rimanente */
+  font-size: 20px;
+  color: black;
+  font-family: 'Montserrat', sans-serif;
 }
 
 
-
-.price{
-	float:right;
-	line-height:1.5;
-	font-family:'Montserrat', sans-serif;
-}
-
-.order-total{
-	padding-left:36.02%;
-	margin:0 auto;
-	border-top-style:solid;
-	border-top-width:3px;
-	background-color:#FFF0F5;
-	border-bottom-right-radius:10px;
-	border-bottom-left-radius:10px;
-	padding-bottom:10px;
-	padding-top:10px;
-	font-family:'Montserrat', sans-serif;
-	font-size:18px;
+/*sotto*/
+.order-total {
+  width:65%;;
+  margin: 0 auto;
+  border-top-style: solid;
+  border-top-width: 3px;
+  background-color: #FFF0F5;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  text-align: right; 
 }
 
 
 .ordercont a:link, #compra a:link{
 	text-decoration:none;
-	color:#ffffff;
+	color:#000000;
 }
 
 .ordercont a:visited, #compra a:visited{
 	text-decoration:none;
-	color:#ffffff;
+	color:#000000;
 }
 
 .ordini {
@@ -135,6 +189,7 @@
   color: #ffffff;
   padding: 1% 2%;
   border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .ordini a:hover {
@@ -154,23 +209,6 @@ body{
 
 
 
-.contenitor {
-
-  margin: 0 auto;
-
-  background-color: #f3f3f3;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  font-weight: lighter;
-  color: #2c2f48;
-  margin-bottom: 20px;
-}
-
-
-
-/*di prova*/
-/* CSS styles */
-
 .container{
 	display: flex;
 	justify-content: center;
@@ -186,7 +224,6 @@ body{
     position: relative;
     border: 2px solid #000;
     overflow: hidden;
-    margin-top: 40px;
 }
 .water:before, .water:after{
     content:'';
@@ -208,21 +245,6 @@ body{
     animation:wave 5s linear infinite;
 }
 
-/*
-@keyframes wave{
-    0%{
-        transform: translate(-50%, -50%) rotate(0);
-        top: -30%;
-    }
-    50%{
-    	top: -50%;
-    }
-    100%{
-        transform: translate(-50%, -50%)  rotate(360deg);
-        top: -30%;
-    }
-}
-*/
 
 
 @keyframes wave{
@@ -238,6 +260,96 @@ body{
         top: -10%;
     }
 }
+
+
+
+
+
+@media screen and (max-width: 800px){
+	
+	
+		  #riepilogoordini {
+    margin-left: 20px;  /* Aggiungi uno spazio a sinistra */
+    margin-right: 20px; /* Aggiungi uno spazio a destra */
+  }
+	
+
+  
+  .headorder{
+	  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+	margin-top:20px;
+	margin-bottom:0px;
+	margin-left:auto;
+	margin-right:auto;
+	background-image:linear-gradient(to bottom,#DC143C,#FFF0F5);
+	border-top-right-radius:10px;
+	border-top-left-radius:10px;
+	width: 100%;
+	height:10%;
+	padding-top:5px;
+	font-size: 16px;
+
+}
+  
+.number{
+	text-align:right;
+	display:inline;
+	float:right;
+	padding-right:10px;
+	font-family:'Montserrat', sans-serif;
+	
+}
+  
+  .date {
+    float: none;
+    text-align: center;
+    padding-left: 0;
+    white-space: nowrap; /* Impedisce il testo di andare a capo */
+  }
+  
+  .acq {
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center; /* Centra il testo dell'acquirente */
+}
+
+.orderimg {
+  width: 150px; /* Larghezza automatica per mantenere le proporzioni originali */
+  height: 150px; /* Imposta l'altezza desiderata per tutte le immagini */
+  margin-right: 10px;
+}
+  
+  .ordercont {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .order-total {
+    width: 95%; /* Riduci la larghezza per evitare il taglio del testo */
+    padding: 10px;
+    padding-top: 20px;
+    text-align: right;
+  }
+
+  .price {
+    text-align: right;
+    margin-right: 5%;
+    width: 60%;
+    float: right;
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  
+
+}
+
+
+
 
 
 

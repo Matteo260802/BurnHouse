@@ -26,6 +26,9 @@ $(document).ready(function(){
 
 <body>
 <%@include file="Header.jsp" %>
+
+
+<div class="page-container">
 <div class="contenitor">
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -39,6 +42,9 @@ $(document).ready(function(){
 
 
 </script>
+
+
+
 
 <!-- eventuale chiusura </head>, apertura <body> -->
 <div class="totole">
@@ -130,8 +136,11 @@ $(document).ready(function(){
 		<%}} %>
 	</div>
 </div>
+</div>
 <footer>
 <%@include file="Footer.jsp" %>
 </footer>
+
+</div>
 </body>
 </html>
