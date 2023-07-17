@@ -10,20 +10,19 @@
 .card-container {
   display: inline-grid;
   grid-template-columns: auto auto auto;
-  padding: 1.38%;
+  padding: 3%;
+  margin-left:5px;
 }
 
 
 .card {
   position: relative;
-  width: 350px;
+  width: 320px;
   height: 500px;
   background: #191919;
   border-radius: 20px;
   overflow: hidden;
   margin: 15px;
-  margin-left:60px;
-  margin-right:50px;
 }
 
 .card::before {
@@ -358,6 +357,27 @@
 
 .totale{
 	display: flex;
+}
+
+@media screen and (max-width: 1900px) {
+	
+	
+	
+  .card-container {
+    display: inline-grid;
+    padding: 1.8%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    height: 550px;
+  }
+
+  .card {
+    width: 330px;
+    height: auto;
+    margin: 10px;
+  }
+
 }
 
 
