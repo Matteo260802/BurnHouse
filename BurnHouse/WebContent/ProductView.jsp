@@ -120,7 +120,7 @@
 		%>
 		
 	
-		  
+  
 <div class="card-container">
 	<div class="card">
 			<div class="imgBox">
@@ -144,7 +144,7 @@
 
 	</div>
 </div>
-
+	
 
 
 
@@ -156,14 +156,13 @@
 		<%
 				}
 			} 
-			else{
-				 %>
-				 
-				<h1>Catalogo momentaneamente non disponibile</h1> 
-				
-				 <%
+			else {
+			    RequestDispatcher dispatcher = request.getRequestDispatcher("CatalogEmpty.jsp");
+			    dispatcher.forward(request, response);
+			    return;
 			}
 		%>
+
 	<jsp:include page="Footer.jsp" />
 </body>
 </html>
