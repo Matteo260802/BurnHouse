@@ -6,6 +6,7 @@
 <meta charset="UTF-8">
 <title>Checkout</title>
 <link rel="stylesheet" type="text/css" href="./CSS/CheckoutStile.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="./script/jquery-3.5.1.js"></script>
 <script src="./script/check.js">
 </script>
@@ -74,7 +75,7 @@ for(CartProduct c: cart.GetCart()){
 	if(spedizione==null || spedizione.isEmpty()){%>
 	<button class="ins"><a href="InsIndirizzo.jsp" class="vai">Inserisci indirizzo di spedizione</a></button>
 	<%}else{ 
-	%><div class=IHead>Indirizzi di spedizione</div> <% 	
+	%><div class="IHead">Indirizzi di spedizione</div> <% 	
 	Iterator it=spedizione.iterator();
 	while(it.hasNext()){
 	IndirizzoBean ind=(IndirizzoBean)it.next();%>
