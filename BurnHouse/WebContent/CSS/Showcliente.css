@@ -274,7 +274,7 @@ h1#riempi{
 }
 
 .cart-btn:hover {
-  background-color: #000000;
+  background-color: #bf3364;
   text-decoration: none;
 }
 
@@ -457,7 +457,7 @@ h1#riempi{
 .prova form {
     margin: 10px;
     align-items: center;
-    margin-left: 600px;
+    margin-left: 30%;
     color: white;
 }
 
@@ -620,3 +620,62 @@ h1#riempi{
 .totale{
 	display: flex;
 }
+
+
+@media screen and (max-width: 720px) {
+  .prova form {
+    margin-left: 34%;
+    text-align: center;
+  }
+
+  .prova form label,
+  .prova form input,
+  .prova form button {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 300px;
+
+  }
+
+  .prova form button[type="submit"] {
+    width: 100%;
+  }
+  
+  .cart-btn {
+  margin-bottom:20%;
+}
+
+}
+
+
+@media screen and (min-width: 720px) and (max-width: 1200px) {
+  .prova form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left:5%;
+  }
+
+  .prova form label,
+  .prova form input,
+  .prova form button {
+    display: inline-block;
+    margin: 20px;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .prova form button[type="submit"] {
+    width: 100%;
+  }
+  
+  .cart-btn {
+    margin-bottom: 20%;
+  }
+}
+
+
+
+
