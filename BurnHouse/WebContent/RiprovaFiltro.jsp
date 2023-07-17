@@ -103,11 +103,15 @@ $(document).ready(function(){
   Collection<?> ordini=(Collection<?>)request.getSession().getAttribute("ordini");
   
   if((ordini==null || ordini.isEmpty())||(tutto==null || tutto.isEmpty())){%>
-      <div class="container">
-		<div class="water"></div>
-      </div>
-	  <h1 id="riempi">La tua botte è vuota</h1>
-	  <button id="compra"><a href="ProductView.jsp">Riempila</a></button>	
+  <div class="container">
+	<div class="water"></div>
+  </div>
+  <h1 id="riempi">Attualmente non risultano ordini effettuati<br>
+  	Esplora il catalogo e scopri i nostri fantastici prodotti
+  </h1>
+  
+  
+       <a href="ProductView.jsp" class="cart-btn">Esplora</a>	
   <%}
   
   

@@ -217,6 +217,7 @@ body{
 }
 
 .water{
+	margin-top:10%;
     width: 250px;
     height: 250px;
     background-color: #5E2129;
@@ -245,7 +246,37 @@ body{
     animation:wave 5s linear infinite;
 }
 
+h1#riempi{
+	margin-top:4%;
+	text-align:center;
+	max-width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #000000;
+}
 
+
+.cart-btn {
+  display: block;
+  margin: 10px auto 0 auto;
+  font-size: 25px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #751f3d;
+  margin-top: 4%;
+  color: #ffffff;
+  text-align: center;
+  width: fit-content;
+  padding: 1% 2%;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  border-radius: 5px; /* Add border-radius for rounded corners */
+}
+
+.cart-btn:hover {
+  background-color: #000000;
+  text-decoration: none;
+}
 
 @keyframes wave{
     0%{
@@ -266,6 +297,12 @@ body{
 
 
 @media screen and (max-width: 800px){
+	
+	.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 50vh;
+}
 	
 	
 		  #riepilogoordini {
@@ -344,6 +381,25 @@ body{
     font-family: 'Montserrat', sans-serif;
   }
   
+    .container {
+    height: auto;
+  }
+
+  .water {
+    width: 150px;
+    height: 150px;
+  }
+
+  h1#riempi {
+    margin-top: 2%;
+    font-size: 22px;
+  }
+
+  .cart-btn {
+    margin-top: 2%;
+    font-size: 20px;
+    padding: 1% 2%;
+  }
   
 
 }
