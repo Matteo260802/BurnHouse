@@ -42,7 +42,7 @@ Header {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 18px;
   margin-left: 75px;/*nuovo*/
   
 }
@@ -192,6 +192,14 @@ h2 { font-size: 130%; }
 	line-height:1.5;
 	backgrond-color:white;
 }
+
+#suggest > li{
+	font-family:font-family: "Open Sans", Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size:20px;
+	line-height:2;
+}
+
+
             
     /* Add responsive styles here */
     @media (max-width: 768px) {
