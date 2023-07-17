@@ -22,12 +22,12 @@ body {
 }
 */
 
-Header {
+header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #751f3d; 
+  background-color: #751f3d;
 }
 
 
@@ -200,7 +200,18 @@ h2 { font-size: 130%; }
 }
 
 
-            
+	@media only screen and (min-width:769px)and (max-width:1024px){
+	#search-box-input {
+        width: 150%;
+        margin-left: 0;
+      }
+	#ajax{
+      width:41%;
+      margin-left: 0;
+      }
+	}
+	
+	        
     /* Add responsive styles here */
     @media (max-width: 768px) {
       /* Styles for screens up to 768px wide */
@@ -214,8 +225,16 @@ h2 { font-size: 130%; }
       width:44%;
       margin-left: 0;
       }
-
+      
+      .menu__list{
+      
+      display:flex;
+      flex-direction:column;
+      
+     
+      }
+      
     }
-
+	
 
 
