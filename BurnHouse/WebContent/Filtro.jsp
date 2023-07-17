@@ -71,13 +71,11 @@
 		<%
 				}
 			} 
-			else{
-				 %>
-				 
-				<h1>Nessun prodotto trovato</h1> 
-				
-				 <%
-			}
+		else{
+			response.sendRedirect("FiltroVuoto.jsp");
+			return;
+			 
+		}
 		%>
 		<jsp:include page="Footer.jsp" />
 </body>
