@@ -178,6 +178,7 @@ public class ProductControl extends HttpServlet {
 					  request.setAttribute("products", prod);
 					  RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ProductView.jsp");
 					  dispatcher.forward(request, response);
+					  return;
 				  }
 				
 			}		
@@ -217,6 +218,7 @@ public class ProductControl extends HttpServlet {
 			String json=jso.toJson(suggest);
 			
 			response.getWriter().write(json);
+			return;
 			}catch(Exception e) {
 				
 			}
