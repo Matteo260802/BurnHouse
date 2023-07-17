@@ -13,14 +13,12 @@
     <meta charset="utf-8">
     <title>Burn House</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"/>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./CSS/Header.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
     <script src="./script/jquery-3.5.1.js"></script>
-    <script src="./script/search.js">
-  
-    
+    <script src="./script/search.js">  
     </script>
   </head> 
 

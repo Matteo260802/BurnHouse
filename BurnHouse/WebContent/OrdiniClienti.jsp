@@ -87,8 +87,12 @@ $(document).ready(function(){
       <div class="container">
 		<div class="water"></div>
       </div>
-	  <h1 id="riempi">La tua botte è vuota</h1>
-	  <button id="compra"><a href="ProductView.jsp">Riempila</a></button>	
+	  <h1 id="riempi">Attualmente non risultano ordini effettuati<br>
+	  	Esplora il catalogo e scopri i nostri fantastici prodotti
+	  </h1>
+	  
+	  
+	       <a href="ProductView.jsp" class="cart-btn">Esplora</a>	
   <%}
   
   else{ %>

@@ -24,5 +24,6 @@ function ajax(find){
 
 function launch(sug){
 	$("#search-box-input").val(sug);
+	$("#search-box-input").focus();
 }
 

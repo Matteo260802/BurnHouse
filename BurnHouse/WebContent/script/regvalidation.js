@@ -39,7 +39,7 @@ function checksurname(cognome){
 
 
 function validate(obj){
-	alert("sono qui");
+	
 	const email=obj.email;
 	const nome=obj.nome;
 	const cognome=obj.cognome;

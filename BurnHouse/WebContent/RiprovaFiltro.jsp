@@ -10,7 +10,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Ordini effettuati</title>
-<link rel="stylesheet" type="text/css" href="./CSS/Showorder.css">
+<link rel="stylesheet" type="text/css" href="./CSS/Showcliente.css">
 <script src="./script/jquery-3.5.1.js" type="text/javascript">
 </script>
 <script>
@@ -22,39 +22,98 @@ $(document).ready(function(){
 	
 });
 </script>
+<script>
+  $(document).ready(function(){
+	  $("#menu").hide(); // Nasconde il menu all'avvio
+    $(".nav-container").click(function(){
+      $("#menu").slideToggle();
+    }); 
+  });
+
+
+</script>
+
+<style>
+/*questo appare solo quando il filtro di ricerca resta vuoto e si tenta una ricerca*/
+.messaggio h3 {
+  color: black;
+  text-align: center;
+  font-size:25px;
+  font-family:'Montserrat', sans-serif;
+  font-weight: bold;
+}
+</style>
+
 </head>
 
 <body>
 <%@include file="Header.jsp" %>
 
-		
-		<h3>Non puoi lasciare il filtro vuoto, riprova</h3>
+
+<div class="page-container">
+<div class="contenitor">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
 
 
-		<form method="post" action="CheckoutServlet">
-				<input type="hidden" name="action" value="filter">
-				
-			 	<label for="utente">Email cliente:</label>
-			  	<input type="text" name="utente">
-			  	
-			  	<label for="datainizio">Data inizio:</label>
-			  	<input type="date" name="datainizio">
-			  	
-			  	<label for="datafine">Data fine:</label>
-			  	<input type="date" name="datafine">
-			  	
-			  	
-			  	<button type="submit">Cerca</button>	  	
-		</form>
+
+
+
+<!-- eventuale chiusura </head>, apertura <body> -->
+<div class="totole">
+ <div class="nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+        </div>
+
+
+
+  <div id="menu">
+    <div class="prova">
+      <form method="post" action="CheckoutServlet">
+        <input type="hidden" name="action" value="filter">
+        
+        <label for="utente">Email cliente:</label>
+        <input type="text" name="utente">
+        
+        <label for="datainizio">Data inizio:</label>
+        <input type="date" name="datainizio">
+        
+        <label for="datafine">Data fine:</label>
+        <input type="date" name="datafine">
+        
+        <button type="submit">Cerca</button>	  	
+      </form>
+    </div>
+  </div>
+
+
+  <br><br><br>
+  
+  <div class="messaggio">
+    <h3>Non puoi lasciare il filtro vuoto, riprova</h3>
+  </div>
+
 
 <% HashMap<?,?> tutto=(HashMap<?,?>)request.getSession().getAttribute("prodorder");
   Collection<?> ordini=(Collection<?>)request.getSession().getAttribute("ordini");
   
   if((ordini==null || ordini.isEmpty())||(tutto==null || tutto.isEmpty())){%>
-	  <img src="./Immagini/bottevuota.jpg" alt="immagine non disponibile" id="vuoto">
-	  <h1 id="riempi">La tua botte è vuota</h1>
-	  <button id="compra"><a href="ProductView.jsp">Riempila</a></button>
+  <div class="container">
+	<div class="water"></div>
+  </div>
+  <h1 id="riempi">Attualmente non risultano ordini effettuati<br>
+  	Esplora il catalogo e scopri i nostri fantastici prodotti
+  </h1>
+  
+  
+       <a href="ProductView.jsp" class="cart-btn">Esplora</a>	
   <%}
+  
   
   else{ %>
   
@@ -100,8 +159,12 @@ $(document).ready(function(){
 		</div>
 		<%}} %>
 	</div>
+</div>
+</div>
 <footer>
 <%@include file="Footer.jsp" %>
 </footer>
+
+</div>
 </body>
 </html>
