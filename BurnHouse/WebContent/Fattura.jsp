@@ -65,7 +65,18 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   
   
   <%
-  String data=request.getParameter("data");
+  //Bisogna prima controllare i prametri ricevuti, per poterli usare, altrimenti nasce una vulnerabilita'
+  
+  String dataParam=request.getParameter("data");
+  String data = "";
+  
+  if (dataParam != null && !dataParam.isEmpty()) {
+	  data = dataParam;
+  }
+  else{
+	  data = "Data mancante";
+  }
+ 
   String nome=request.getParameter("nome");
   String cognome=request.getParameter("cognome");
   String indirizzo=ordine.GetInd();
@@ -78,7 +89,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
     </tr>
     <tr>
       <th>Data fatturazione:</th>
-      <td><%=data%></td>
+      <td><%=dataParam%></td>
     </tr>
     <tr>
       <th>Cliente:</th>
