@@ -46,7 +46,7 @@ $(document).ready(function(){
   
        <a href="ProductView.jsp" class="cart-btn">Esplora</a>	
 
-  
+  <%}else{%>
 	<div id="riepilogoordini">
 	<% Iterator it=ordini.iterator();
 		while(it.hasNext()){
@@ -92,7 +92,9 @@ $(document).ready(function(){
 			€<%=String.format("%.2f", order.GetPrice()) %>
 		
 		</div>
-		<%}} %>
+		<%} 
+		
+  }%>
 	</div>
 			</div>
 	<%@include file="Footer.jsp" %>
