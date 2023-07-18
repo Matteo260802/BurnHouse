@@ -2,7 +2,7 @@
     pageEncoding="UTF-8" import="java.util.*, model.Pagamento"%>
     
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <title>Pagamenti</title>
