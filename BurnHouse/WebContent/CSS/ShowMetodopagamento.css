@@ -1,16 +1,19 @@
-body {
+body{
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100vh; 
 }
 
+   .footer{
+     margin-top: auto;
+    }
+
 #indcontainer {
-  flex-grow: 1;
   margin: 30px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
   grid-gap: 9%;
   overflow-y:scroll;
+  flex-wrap: wrap;
 }
 
 .carta {
@@ -57,9 +60,6 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 
-#footer {
-  height: 100%;
-}
 
 a.indlink:hover {
   text-decoration: underline;
@@ -145,14 +145,22 @@ a.indlink:hover {
 
 
 @media screen and (max-width: 1200px) {
-  div#indcontainer {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+   div#indcontainer {
+  margin: 30px;
+  display: inline-grid;
+  grid-gap: 9%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  overflow-y:scroll;
+}
 }
 
 @media screen and (max-width: 800px) {
   div#indcontainer {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  }
+  margin: 30px;
+  display: inline-grid;
+  grid-gap: 9%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  overflow-y:scroll;
+}
 }
 
