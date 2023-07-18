@@ -76,7 +76,7 @@
     
     <div class="sinistra">
     	<div class="foto">
-    	    <img src="${pageContext.request.contextPath}/Immagini/profilo.png" height="180px">
+    	    <img src="${pageContext.request.contextPath}/Immagini/profilo.png" height="180px" alt="Immagine non disponibile">
     	</div>
     	<div class="dettagli">
     	    <div class="nome">

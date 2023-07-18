@@ -256,78 +256,78 @@
 	<div class="slide-track">
 
 		<div class="slide">
-			<img src="Immagini/marchio1.jpg">
+			<img src="Immagini/marchio1.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio2.jpg">
+			<img src="Immagini/marchio2.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio3.jpg">
+			<img src="Immagini/marchio3.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio4.jpg">
+			<img src="Immagini/marchio4.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio5.jpg">
+			<img src="Immagini/marchio5.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio6.jpg">
+			<img src="Immagini/marchio6.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio7.jpg">
+			<img src="Immagini/marchio7.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio8.jpg">
+			<img src="Immagini/marchio8.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio9.jpg">
+			<img src="Immagini/marchio9.jpg" alt="Immagine non disponibile">
 		</div>
 
 
 		<!--le stesse foto duplicate-->
 
 		<div class="slide">
-			<img src="Immagini/marchio1.jpg">
+			<img src="Immagini/marchio1.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio2.jpg">
+			<img src="Immagini/marchio2.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio3.jpg">
+			<img src="Immagini/marchio3.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio4.jpg">
+			<img src="Immagini/marchio4.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio5.jpg">
+			<img src="Immagini/marchio5.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio6.jpg">
+			<img src="Immagini/marchio6.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio7.jpg">
+			<img src="Immagini/marchio7.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio8.jpg">
+			<img src="Immagini/marchio8.jpg" alt="Immagine non disponibile">
 		</div>
 
 		<div class="slide">
-			<img src="Immagini/marchio9.jpg">
+			<img src="Immagini/marchio9.jpg" alt="Immagine non disponibile">
 		</div>
 
 

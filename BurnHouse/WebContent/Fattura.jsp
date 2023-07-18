@@ -88,7 +88,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   String encodedInd = org.owasp.encoder.Encode.forHtml(indirizzo);
   %>
   
-  <table>
+  <table summary="riepilogo fattura">
     <tr>
       <th>Numero fattura:</th>
       <td><%=nOrdine %></td>
@@ -111,7 +111,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   
   <h2>Dettagli Fattura</h2>
   
-  <table>
+  <table summary="riepilogo prodotti">
     <tr>
       <th>Prodotto</th>
       <th>Quantità</th>
