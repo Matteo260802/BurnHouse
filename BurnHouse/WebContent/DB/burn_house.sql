@@ -28,11 +28,6 @@ on delete restrict,
 titolare varchar(50) not null,
 scadenza varchar(10) not null);
 
-create table produttore(
-partita_iva char(11) primary key,
-sede varchar(50) not null
-);
-
 
 create table product(
   codice int primary key,
@@ -77,14 +72,6 @@ primary key(num_ordine,prodotto),
 foreign key(num_ordine) references ordine(codice) on update no action on delete no action,
 foreign key(prodotto) references product(codice) on update cascade on delete no action,
 quantita integer not null
-);
-
-create table produzione(
-prodotto integer not null,
-produttore char(11) not null,
-primary key(prodotto,produttore),
-foreign key(prodotto) references product(codice) on update cascade on delete no action,
-foreign key(produttore)references produttore(partita_IVA) on update cascade on delete no action
 );
 
 
