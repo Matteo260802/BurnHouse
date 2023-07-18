@@ -9,7 +9,6 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
 <meta charset="UTF-8">
 <title>BurnHouse</title>
 <link rel="stylesheet" type="text/css" href="./CSS/FatturaStile.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
   function downloadAsPDF() {
     var element = document.getElementById("content").cloneNode(true);
