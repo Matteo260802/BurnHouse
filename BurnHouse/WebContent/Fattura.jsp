@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" 
 pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
 <%@ page import="model.*" %>
+<%@taglib prefix="e" uri="https://www.owasp.org/index.php/OWASP_Java_Encoder_Project" %>
 <!DOCTYPE html>
 
 <html>
@@ -65,22 +66,10 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   
   
   <%
-  //Bisogna prima controllare i prametri ricevuti, per poterli usare, altrimenti nasce una vulnerabilita'
+  String data=request.getParameter("data");
+  String encodedData = org.owasp.encoder.Encode.forHtml(data);
   
-  String dataParam=request.getParameter("data");
-  String data = "";
   
-  if (dataParam != null && !dataParam.isEmpty()) {
-	  if (dataParam.matches("\\d{2}-\\d{2}-\\d{4}")) {
-	  		data = dataParam;
-	  } else {
-		 	 data = "Data non valida";
-	  }
-  }
-  else{
-	  data = "Data mancante";
-  }
- 
   String nome=request.getParameter("nome");
   String cognome=request.getParameter("cognome");
   String indirizzo=ordine.GetInd();
@@ -93,7 +82,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
     </tr>
     <tr>
       <th>Data fatturazione:</th>
-      <td><%=dataParam%></td>
+      <td><%= encodedData%></td>
     </tr>
     <tr>
       <th>Cliente:</th>
