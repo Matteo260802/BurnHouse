@@ -644,6 +644,9 @@ h1#riempi{
   .cart-btn {
   margin-bottom:20%;
 }
+.headorder{
+	margin-top:40px;
+}
 
 }
 
@@ -673,6 +676,10 @@ h1#riempi{
   .cart-btn {
     margin-bottom: 20%;
   }
+  
+  .headorder{
+	margin-top:40px;
+}
 }
 
 
