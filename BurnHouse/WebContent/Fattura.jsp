@@ -66,6 +66,15 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   
   
   <%
+  
+  /*
+  Prima di prendere i dati dalla richiesta per essere usati devono essere controllati, 
+  altrimenti potrebbero essere inviati dati dannosi o indesiderati, per fare questo usiamo
+  la funzione forHtml che esegue l'encoding dei dati, andando a trasformare eventuali 
+  caratteri speciali e prevenendo il Cross-Site Scripting.
+  */
+  
+  
   String data=request.getParameter("data");
   String encodedData = org.owasp.encoder.Encode.forHtml(data);
   
