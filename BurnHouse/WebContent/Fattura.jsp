@@ -71,8 +71,13 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   
   
   String nome=request.getParameter("nome");
+  String encodedNome = org.owasp.encoder.Encode.forHtml(nome);
+  
   String cognome=request.getParameter("cognome");
+  String encodedCognome = org.owasp.encoder.Encode.forHtml(cognome);
+  
   String indirizzo=ordine.GetInd();
+  String encodedInd = org.owasp.encoder.Encode.forHtml(indirizzo);
   %>
   
   <table>
@@ -86,11 +91,11 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
     </tr>
     <tr>
       <th>Cliente:</th>
-      <td><%=nome%> <%=cognome%></td>
+      <td><%=encodedNome%> <%=encodedCognome%></td>
     </tr>
     <tr>
       <th>Indirizzo di spedizione:</th>
-      <td><%=indirizzo%></td>
+      <td><%=encodedInd%></td>
     </tr>
   </table>
   
