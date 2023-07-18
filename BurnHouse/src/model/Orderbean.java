@@ -65,7 +65,7 @@ public void SetDate(Date date) {
 }
 
 public String GetDate() {
-	SimpleDateFormat pattern=new SimpleDateFormat("dd/MM/YYYY");
+	SimpleDateFormat pattern=new SimpleDateFormat("dd/MM/yyyy");
 	String date=pattern.format(this.date.getTime());
 	return date;
 }
