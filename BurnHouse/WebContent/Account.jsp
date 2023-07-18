@@ -138,6 +138,9 @@
 </div>
 
 <br>
+
+<div class="footer">
 	<%@ include file="Footer.jsp" %>
+</div>
 </body>
 </html>
