@@ -382,31 +382,10 @@
 
 
 
+
+
+
 @media screen and (max-width: 1600px) {
-	
-	
-	
-  .card-container {
-    display: inline-grid;
-    padding: 1.38%;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
-    height: 550px;
-    margin-left:70px;
-    margin-top:50px;
-  }
-
-  .card {
-    width: 330px;
-    height: auto;
-    margin: 10px;
-  }
-
-}
-
-
-@media screen and (max-width: 1500px) {
 	
 	   .prova {
     display: flex;
@@ -467,7 +446,7 @@
   }
 
   .card {
-    width: 350px;
+    width: 330px;
     height: auto;
     margin: 10px;
   }
