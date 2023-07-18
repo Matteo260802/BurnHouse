@@ -541,10 +541,10 @@ h1{
 	
 	.indirizzo{
 	background-color: #449db7;
-	height: 100px;
-	width: 190px;
-	margin-left: 50px;
-	margin-top: 20px;
+	height: 130px;
+	width: 220px;
+	margin-left: 25.6%;
+	margin-top: 6%;
 
 	padding: 20px;
     border-radius: 10px;
@@ -553,10 +553,10 @@ h1{
 	
 	.metodo{
 	   background-color: #449db7;
-	height: 100px;
-	width: 190px;
-	margin-left: 0px;
-	margin-top: 20px;
+	height: 130px;
+	width: 220px;
+	margin-left: 15.3%;
+	margin-top: 9%;
 
 	padding: 20px;
     border-radius: 10px;
@@ -574,13 +574,14 @@ h1{
 	.MHead{
 	padding: 10px;
   	width: 200px;
-  	margin-left: 5px;
+  	margin-left: 21%;
+  	margin-top: 20%;
 	} 
   	
   	.IHead{
 	padding: 10px;
   	width: 200px;
-  	margin-left: 55px;
+  	margin-left: 29.3%;
     }
     
     .cornice{
