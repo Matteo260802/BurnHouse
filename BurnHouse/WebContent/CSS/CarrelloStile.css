@@ -5,12 +5,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
 }
 
 a {
   text-decoration: none;
   color: #202020;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .CartUser{
@@ -21,6 +21,7 @@ a {
  display: flex;
  justify-content:center;
  align-items: center;
+ 
  
 }
 .Cart-Container{
@@ -268,6 +269,7 @@ a:hover {
   margin-bottom: 10px;
   margin-left: 55px; /* Aggiungi uno spazio a sinistra */
   margin-right: 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .empty-cart .button {
@@ -290,12 +292,6 @@ a:hover {
 
 .button:hover{
 	 background-color: #751f3d;
-}
-
-
-
-.footer {
-  margin-top: 200px; /* Aggiungi uno spazio di 20px tra il footer e gli elementi sopra di esso */
 }
 
 
@@ -341,6 +337,8 @@ a:hover {
 	
 	.subtitle{
 	text-align:center;}
+	
+	
 
 }
 @media only screen and (max-width:720px){
@@ -410,5 +408,13 @@ a:hover {
 	width:95%;
 	height:30%;
 	}
+	
+	.empty-cart p { 
+	  color: #000000; font-size: 28px;  padding-bottom: 10px;
+	  margin-bottom: 10px;
+	  margin-left: 55px; 
+	  margin-right: 10px;
+	  font-family: 'Montserrat', sans-serif;
+}
 
 }

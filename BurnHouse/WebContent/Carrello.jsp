@@ -90,9 +90,7 @@
 			</div>
 		</div>
 		<%}%>
-		<footer class="footer">
 		<jsp:include page="Footer.jsp" />
-		</footer>
 		
 	</body>
 </html>
