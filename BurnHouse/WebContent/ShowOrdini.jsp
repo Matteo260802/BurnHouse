@@ -61,7 +61,7 @@ $(document).ready(function(){
 			</span><div class="number">Ordine n.<%=order.GetCode() %>
 			<br>
 			<div class="fattura">
-			<a href="Fattura.jsp?code=<%=order.GetCode() %>&data=<%=order.GetDate()%>&nome=<%=request.getSession().getAttribute("nome")%>&cognome=<%=request.getSession().getAttribute("cognome")%>&nOrdine=<%=order.GetCode() %>">Fattura</a>
+			<a href="Fattura.jsp?code=<%=order.GetCode() %>">Fattura</a>
 			</div>
 			</div>
 			<span class="date">Data effettuazione:<br><%=order.GetDate() %></span>

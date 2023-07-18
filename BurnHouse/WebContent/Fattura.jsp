@@ -46,12 +46,12 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
 	
 
 	<%
-	String Ordine=request.getParameter("nOrdine");
-	int nOrdine = Integer.parseInt(Ordine);
+	
+	
     OrderDAO model = new OrderDAO();
-    Collection<CartProduct> products = model.DoRetrieveByOrder(nOrdine);
     String codice=request.getParameter("code");
     int cod=Integer.parseInt(codice);
+    Collection<CartProduct> products = model.DoRetrieveByOrder(cod);
     Orderbean ordine = model.DoRetrieveByKey(cod);
 	%>
 
@@ -65,28 +65,25 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   
   
   <%
-  String data=request.getParameter("data");
-  String nome=request.getParameter("nome");
-  String cognome=request.getParameter("cognome");
-  String indirizzo=ordine.GetInd();
+ 	HttpSession ses=request.getSession();
   %>
   
   <table>
     <tr>
       <th>Numero fattura:</th>
-      <td><%=nOrdine %></td>
+      <td><%=ordine.GetCode() %></td>
     </tr>
     <tr>
       <th>Data fatturazione:</th>
-      <td><%=data%></td>
+      <td><%=ordine.GetDate()%></td>
     </tr>
     <tr>
       <th>Cliente:</th>
-      <td><%=nome%> <%=cognome%></td>
+      <td><%=ses.getAttribute("nome")%> <%=ses.getAttribute("cognome")%></td>
     </tr>
     <tr>
       <th>Indirizzo di spedizione:</th>
-      <td><%=indirizzo%></td>
+      <td><%=ordine.GetInd()%></td>
     </tr>
   </table>
   
