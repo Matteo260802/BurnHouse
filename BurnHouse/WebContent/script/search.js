@@ -5,7 +5,7 @@ function ajax(find){
 	xmlhttp.onreadystatechange=function(){
 		if(xmlhttp.readyState==4 && xmlhttp.status==200){
 			const sugg=JSON.parse(xmlhttp.responseText);
-			for(i=0;i<sugg.length;i++){
+			for( let i=0;i<sugg.length;i++){
 				
 				let li="<li onclick='launch(this.innerHTML)'>"+sugg[i]+"</li>";
 				$("#suggest").append(li);
