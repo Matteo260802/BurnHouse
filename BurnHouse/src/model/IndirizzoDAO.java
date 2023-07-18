@@ -31,39 +31,38 @@ public class IndirizzoDAO {
 	}
 
 	
-	public synchronized IndirizzoBean DoRetrieveByKey(String via, String cap, String citta) throws SQLException{
-		Connection con=null;
-		PreparedStatement query=null;
-		String quer="Select * From "+table_name+" Where via=? AND cap=? AND citta=?";
-		IndirizzoBean ind=new IndirizzoBean();
-		
-		try {
-			con=ds.getConnection();
-			query=con.prepareStatement(quer);
-			if((via!=null && !via.equals(""))&&(cap!=null && !cap.equals(""))&&(citta!=null && !citta.equals(""))) {
-				query.setString(1, via);
-				query.setString(2, cap);
-				query.setString(3, citta);
-				
-				ResultSet res=query.executeQuery();
-			while(res.next()) {
-				ind.SetVia(res.getString("via"));
-				ind.SetCap(res.getString("cap"));
-				ind.SetCitta(res.getString("citta"));
-			}
-			
-			}
-		}finally {
-			try {
-				if (query != null)
-					query.close();
-			} finally {
-				if (con != null)
-					con.close();
-			}
-		}
-		return ind;
-		
+	public synchronized IndirizzoBean DoRetrieveByKey(String via, String cap, String citta) throws SQLException {
+	    Connection con = null;
+	    PreparedStatement query = null;
+	    String quer = "SELECT * FROM " + table_name + " WHERE via=? AND cap=? AND citta=?";
+	    IndirizzoBean ind = new IndirizzoBean();
+
+	    try {
+	        con = ds.getConnection();
+	        query = con.prepareStatement(quer);
+	        if ((via != null && !via.equals("")) && (cap != null && !cap.equals("")) && (citta != null && !citta.equals(""))) {
+	            query.setString(1, via);
+	            query.setString(2, cap);
+	            query.setString(3, citta);
+
+	            ResultSet res = query.executeQuery();
+	            if (res.next()) {
+	                ind.SetVia(res.getString("via"));
+	                ind.SetCap(res.getString("cap"));
+	                ind.SetCitta(res.getString("citta"));
+	            }
+	            res.close();
+	        }
+	    } finally {
+	        try {
+	            if (query != null)
+	                query.close();
+	        } finally {
+	            if (con != null)
+	                con.close();
+	        }
+	    }
+	    return ind;
 	}
 	
 	public synchronized ArrayList<IndirizzoBean> DoRetrieveAll(String order) throws SQLException{
