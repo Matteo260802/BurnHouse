@@ -35,16 +35,16 @@
                <i class="fas fa-map-marker-alt"></i>
             </div>
             
-            <div class="topic">Address</div>
-            <div class="text-one">sdfsdfsdfsdfsdf</div>
+            <div class="topic">Indirizzo</div>
+            <div class="text-one">Via Crocevia 19</div>
             </div>
             
             <div class="phone">
             <div class ="icona">
             <i class="fas fa-phone-alt"></i>
             </div>
-            <div class="topic">Phone</div>
-            <div class="text-one">23423423423</div>
+            <div class="topic">Telefono</div>
+            <div class="text-one">+39 345 459 3456</div>
             </div>
             
             <div class="email">
@@ -52,7 +52,7 @@
             <i class="fas fa-envelope"></i>
             </div>
             <div class="topic">Email</div>
-            <div class="text-one">sdfsdfsdfsdfsdf</div>
+            <div class="text-one">info@burnhouse.com</div>
             </div>
          </div>
          </div>

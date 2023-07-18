@@ -99,6 +99,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
       <th>Prodotto</th>
       <th>Quantità</th>
       <th>Prezzo unitario</th>
+      <th>Iva</th>
       <th>Totale</th>
     </tr>
     
@@ -106,8 +107,10 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
     <tr>
       <td><%=bean.GetNome() %></td>
       <td><%=bean.GetQuantita() %></td>
-      <td><%=bean.GetPrezzo() %>€</td>
-      <td><%=bean.GetPrezzo()*bean.GetQuantita() %>€</td>
+      <td><%=String.format("%.2f",bean.GetPrezzo()) %>€</td>
+      <% double iva = (bean.GetPrezzo()*22)/100; %>
+      <td><%= String.format("%.2f",iva) %>€</td>
+      <td><%=String.format("%.2f",(bean.GetPrezzo()+iva)*bean.GetQuantita()) %>€</td>
     </tr>
 	<%} %>  
   </table>

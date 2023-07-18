@@ -22,9 +22,9 @@
           <ul>
             <li class= "selected">+39 079 261905</li>
             <li>Lun - Ven 10:00 - 19:00</li>
-            <li>info@rau.it</li>
-            <li>(07100) Sassari</li>
-            <li>Z.I. Predda Niedda Sud strada 15</li>
+            <li>info@burnhouse.com</li>
+            <li>(84086) Rocca Piemonte</li>
+            <li>Via Crocevia 19</li>
           </ul>
         </div>
   

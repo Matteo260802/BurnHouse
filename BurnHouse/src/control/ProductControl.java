@@ -218,7 +218,7 @@ public class ProductControl extends HttpServlet {
 			String json=jso.toJson(suggest);
 			
 			response.getWriter().write(json);
-			return;
+			
 			}catch(Exception e) {
 				
 			}

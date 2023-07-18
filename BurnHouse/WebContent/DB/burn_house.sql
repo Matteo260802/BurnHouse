@@ -28,11 +28,6 @@ on delete restrict,
 titolare varchar(50) not null,
 scadenza varchar(10) not null);
 
-create table produttore(
-partita_iva char(11) primary key,
-sede varchar(50) not null
-);
-
 
 create table product(
   codice int primary key,
@@ -79,14 +74,6 @@ foreign key(prodotto) references product(codice) on update cascade on delete no 
 quantita integer not null
 );
 
-create table produzione(
-prodotto integer not null,
-produttore char(11) not null,
-primary key(prodotto,produttore),
-foreign key(prodotto) references product(codice) on update cascade on delete no action,
-foreign key(produttore)references produttore(partita_IVA) on update cascade on delete no action
-);
-
 
 create table spedizione(
 utente varchar(100) not null references utente(email) on update cascade on delete no action,
@@ -128,7 +115,7 @@ INSERT INTO product values (27,"LE STANZE 2017",45.00,"Un grande rosso moderno, 
 INSERT INTO product values (28,"POGGIO ALLE NANE 2020",73.30,"Nato dall’unione delle migliori uve di Cabernet Franc, Cabernet Sauvignon ed una piccola quota di Carménère con il terroir unico dei vigneti di Poggio alle Nane, una delle aree più vocate dell’azienda e capace di produrre uve di straordinaria qualità. Un vino dalla grande complessità aromatica e dall’elegante fitta trama tannica. La classe e la personalità dei questo vino si impongono già all’olfatto con aromi di grande complessità che delicatamente ma incessantemente affiorano e si moltiplicano. Al gusto il vino è equilibratamente austero e potente con un finale molto persistente e tannini aristocratici",14,"vino","28.jpg",75);
 INSERT INTO product values (29,"QUATER VITIS 2015",16.90,"I quattro Cru del Quater Vitis Rosso esprimono tutta le personalità di altrettante varietà autoctone siciliane in un percorso di vinificazione singolo e differente, per poi unirsi armonicamente, dopo minuziosi assaggi che certificano il giusto livello di maturazione, in un unico vino. Quater Vitis Rosso è prodotto utilizzando le migliori uve dell’anno di Nero d’Avola, Perricone, Frappato provenienti dai vigneti di Pianoro Cuddìa e Nerello Cappuccio, proveniente dalla tenuta di Cavanera Etnea. Queste varietà vengono allevate con pratiche agronomiche diversificate per vitigno, così come diversi sono i tempi di raccolta delle uve, che viene completata entro la metà del mese di settembre per i vitigni di Frappato, Perricone e Nero d’Avola, nel mese di Ottobre, per il vitigno di Nerello Cappuccio.",14,"vino","29.jpg",75);
 INSERT INTO product values (30,"RUNGG TRAMIN 2018",16.00,"Il Merlot Cabernet della Cantina Tramin viene prodotto nella zona collinare dei Ronchi (Rungg) sul versante sud di Termeno particolarmente soleggiato. È un taglio bordolese che nasce dalla splendida unione di uve Merlot, Cabernet Sauvignon e Franc. I profumi sono di notevole vigore e piacevolezza, di frutta rossa e spezie. In bocca rivela bella eleganza, sapidità e freschezza. Questo vino altoatesino si presenta alla vista di colore rosso rubino brillante.  Il sorso si distende corposo e strutturato, la trama tannica è morbida ed equilibrata. Finale lungo e persistente. Si sposa con i secondi piatti di carne rossa: arrosto, selvaggina, brasato. Ottimo anche con i formaggi stagionati.",13,"vino","30.jpg",75);
-INSERT INTO product values (31,"AMÈ MOSCATO 2022",19.00,"Vino dolce giovane, fresco, ottimo per accompagnare formaggi erborinati leggermente piccanti o dolci della tradizione sarda. Colore giallo dorato intenso. Al naso evidenti sensazioni morbide di albicocca appassita, fichi, miele, frutta candita e piccoli fiori bianchi. In bocca si percepisce la setosità e morbidezza tipiche del vitigno, arricchite da un spalla acida e minerale. Buon bilanciamento di zuccheri, acidità, alcool. Il finale è lungo, caldo, e ricorda gli agrumi canditi, cannella, frutta a polpa bianca.",17.5,"vino","31.jpg",75);
+INSERT INTO product values (31,"AME MOSCATO 2022",19.00,"Vino dolce giovane, fresco, ottimo per accompagnare formaggi erborinati leggermente piccanti o dolci della tradizione sarda. Colore giallo dorato intenso. Al naso evidenti sensazioni morbide di albicocca appassita, fichi, miele, frutta candita e piccoli fiori bianchi. In bocca si percepisce la setosità e morbidezza tipiche del vitigno, arricchite da un spalla acida e minerale. Buon bilanciamento di zuccheri, acidità, alcool. Il finale è lungo, caldo, e ricorda gli agrumi canditi, cannella, frutta a polpa bianca.",17.5,"vino","31.jpg",75);
 INSERT INTO product values (32,"ARENU VERMENTINO 2020",10.80,"Ottimo come aperitivo, è il naturale accompagnamento di prodotti del mare. Profumo delicato, con toni floreali e vegetali di macchia mediterranea e note di frutti estivi. Si tratta di un vino bianco a Denominazione di Origine Controllata, ottenuto da uve Vermentino. Vino dal colore paglierino, intenso, luminoso e caldo. Consistente e con un profumo delicato, con toni floreali e vegetali di macchia mediterranea e note di frutti estivi. AL palato le tipiche note varietali di morbidezza del vitigno vengono bilanciate da viva freschezza e mineralità.",12,"vino","32.jpg",75);
 INSERT INTO product values (33,"ASSOLO CANNONAU 2021",12.00,"Un Cannonau elegante: vino rosso Cannonau Assolo della Tenuta L'Ariosa. Nell’entroterra idilliaco e incontaminato dell’isola mediterranea della Sardegna, la Tenuta L’Ariosa ha trovato il suo posto. Dal colore rosso rubino intenso con un unghia violacea; ha un profumo fresco, speziato, con note di confettura di mora e piccoli frutti rossi. Al gusto è ricco, con tannini eleganti, piacevole struttura e corpo, di lunga persistenza. Questo gusto vellutato con note speziate, ed il finale lungo lo rendono perfetto per accompagnar primi piatti ricchi con sughi di carne, arrosti di carne rossa, pecorini stagionati, verdure fritte.",14,"vino","33.jpg",75);
 INSERT INTO product values (34,"CASTELLO DI VERDUNO 2019",37.50,"Il Barolo di Castello di Verduno è un vino elegante e austero dall’ottimo rapporto qualità/prezzo, vinificato in tini di rovere aperti e affinato per 31 mesi in grandi botti. Dal colore luminoso, rosso rubino brillante. Il sorso è strutturato, intenso e piacevolmente tannico, sostenuto da una sottile freschezza. Dal profumo ampio e balsamico, questa elegante miscela di frutta e spezie contiene note di:  pepe, confettura, ciliegia sotto spirito, timo, geranio, violetta. In bocca domina la freschezza con una finale lungo ed equilibrato",14,"vino","34.jpg",75);

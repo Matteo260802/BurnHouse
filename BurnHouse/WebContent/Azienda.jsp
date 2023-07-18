@@ -79,9 +79,9 @@
     
     <div class="abcontainer">
        <div class="abhero-content">
-          <h2>La mission</h2>
+          <h2>Una missione</h2>
           <p>
-             Una bottiglia non è solo una bottiglia, è molto di più.È convivialità, gioia, divertimento, riflessione, 
+             Una bottiglia non è solo una bottiglia, è molto di più. È convivialità, gioia, divertimento, riflessione, 
              spensieratezza, risate, amore e condivisione. Vogliamo accompagnarvi in questi attimi di vita e rendervi parte 
              integrante dei "racconti di vite"; mettere a disposizione la nostra sapienza per aiutarvi a trovare l’etichetta più 
              adatta all’occasione; proporre sempre e solo prodotti di qualità che vi portino ad apprezzare fino in fondo la bellezza
