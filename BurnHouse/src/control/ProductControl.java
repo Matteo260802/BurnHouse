@@ -81,7 +81,7 @@ public class ProductControl extends HttpServlet {
 						String imageFileName=file.getSubmittedFileName();
 						//System.out.println("Immagine selezionata: "+imageFileName);
 						
-						String uploadPath="C:/Users/matte/eclipse-workspace 2023/Burn_House/src/main/webapp/Immagini/"+imageFileName;
+						String uploadPath="C:/Users/matte/git/repository/BurnHouse/WebContent/Immagini/"+imageFileName;
 						//System.out.println("Upload Path: "+uploadPath);
 					
 						
