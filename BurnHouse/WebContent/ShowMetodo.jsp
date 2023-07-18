@@ -2,7 +2,7 @@
     pageEncoding="UTF-8" import="java.util.*, model.Pagamento"%>
     
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Pagamenti</title>
@@ -67,9 +67,9 @@ Pagamento ind=(Pagamento)it.next();%>
 
 <%} %>
 </div>
-<footer id="footer">
-<%@include file="Footer.jsp"%>
-</footer>
+<div class="footer">
+	<%@ include file="Footer.jsp" %>
+</div>
 
 </body>
 

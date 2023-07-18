@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" import="java.util.*, model.IndirizzoBean"%>
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>Indirizzi Utente</title>
@@ -65,9 +65,9 @@ IndirizzoBean ind=(IndirizzoBean)it.next();%>
 
 </div>
 
-<footer id="footer">
-<%@include file="Footer.jsp"%>
-</footer>
+<div class="footer">
+	<%@ include file="Footer.jsp" %>
+</div>
 
 
 </body>
