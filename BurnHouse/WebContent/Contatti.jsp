@@ -36,7 +36,7 @@
             </div>
             
             <div class="topic">Indirizzo</div>
-            <div class="text-one">.I. Predda Niedda Sud strada 15</div>
+            <div class="text-one">Z.I. Predda Niedda Sud strada 15</div>
             </div>
             
             <div class="phone">
