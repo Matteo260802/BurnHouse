@@ -14,13 +14,7 @@
 <script src="./script/jquery-3.5.1.js" type="text/javascript">
 </script>
 <script>
-$(document).ready(function(){
-	$(".ordercont").hide();
-	$(".headorder").click(function(){
-		$(this).nextAll(".ordercont").slideToggle();
-	});
-	
-});
+
 </script>
 </head>
 

@@ -260,6 +260,9 @@ public class OrderDAO {
 			con=ds.getConnection();
 			query=con.prepareStatement(quer1);
 			query2=con.prepareStatement(quer2);
+		
+			query.setInt(1, order);
+			query2.setInt(1, order);
 			
 			query2.executeUpdate();
 			query.executeUpdate();
@@ -270,7 +273,7 @@ public class OrderDAO {
 				
 			}finally {
 				try {
-				if(query2!=null)query2.close();
+				if(query!=null)query.close();
 				}finally{
 					if(con!=null)con.close();
 				}
