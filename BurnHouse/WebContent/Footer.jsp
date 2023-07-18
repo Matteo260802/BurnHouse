@@ -8,7 +8,7 @@
 %>
 
 <!DOCTYPE html>
-<html>
+<html lang="it">
   <head>
     <meta charset="utf-8">
     <title>Burn House</title>

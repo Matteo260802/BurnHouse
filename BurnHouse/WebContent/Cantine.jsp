@@ -3,7 +3,7 @@
     <!DOCTYPE html>
 
 
-<html>
+<html lang="it">
 <head>
     <title>Cantine</title>
     

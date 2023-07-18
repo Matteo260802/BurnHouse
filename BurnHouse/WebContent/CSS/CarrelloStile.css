@@ -216,7 +216,6 @@ a {
   border-radius: 4px;
   text-decoration: none;
   color: #FFFFFF;
-  text-decoration: none;
   padding: 12px 30px;
   transition: background-color 0.3s ease;
 }
@@ -242,7 +241,6 @@ a.button:hover {
   cursor: pointer;
   border: 1px solid transparent;
   border-radius: 4px;
-  color: #fff;
   border-color: #2e6da4;
   background-color: #ddd;
   color: black;

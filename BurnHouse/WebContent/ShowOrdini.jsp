@@ -6,7 +6,7 @@
 	Boolean US = (Boolean) session.getAttribute("userFilter");
 %>
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <title>Ordini effettuati</title>

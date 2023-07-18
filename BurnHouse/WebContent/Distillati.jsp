@@ -8,7 +8,7 @@
 	boolean isLoggedAdmin = isAdmin != null && isAdmin.booleanValue();
 %>
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <%@ page import="java.util.*" %>
 <%@ include file="Header.jsp" %>
 <head>

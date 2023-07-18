@@ -4,7 +4,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
 <%@taglib prefix="e" uri="https://www.owasp.org/index.php/OWASP_Java_Encoder_Project" %>
 <!DOCTYPE html>
 
-<html>
+<html lang="it">
 <head>
 <meta charset="UTF-8">
 <title>BurnHouse</title>

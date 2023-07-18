@@ -7,7 +7,7 @@
 %>
 	
 <!DOCTYPE html>
-<html>
+<html lang="it">
 
 <%@ include file="Header.jsp" %>
 <%@ page import="java.util.*, model.Carrello,model.CartProduct" %>
