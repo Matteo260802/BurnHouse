@@ -358,26 +358,6 @@
 	display: flex;
 }
 
-@media screen and (max-width: 1900px) {
-	
-	
-	
-  .card-container {
-    display: inline-grid;
-    padding: 1.8%;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
-    height: 550px;
-  }
-
-  .card {
-    width: 330px;
-    height: auto;
-    margin: 10px;
-  }
-
-}
 
 
 
@@ -435,7 +415,7 @@
 	
   .card-container {
     display: inline-grid;
-    padding: 1.38%;
+    padding: 3%;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0;

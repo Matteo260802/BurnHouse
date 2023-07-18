@@ -81,19 +81,22 @@ public class ProductControl extends HttpServlet {
 						String imageFileName=file.getSubmittedFileName();
 						//System.out.println("Immagine selezionata: "+imageFileName);
 						
-						String uploadPath="C:/Users/matte/git/BurnHouse/BurnHouse/WebContent/Immagini/"+imageFileName;
+						String uploadPath="C:/Users/matte/eclipse-workspace 2023/Burn_House/src/main/webapp/Immagini/"+imageFileName;
 						//System.out.println("Upload Path: "+uploadPath);
 					
 						
 						
 						try {
 							FileOutputStream fos = new FileOutputStream(uploadPath);
-							InputStream is =file.getInputStream();
-							
+							InputStream is = file.getInputStream();
+
 							byte[] data = new byte[is.available()];
-							is.read(data);
-							fos.write(data);
+							int bytesRead;
+							while ((bytesRead = is.read(data)) != -1) {
+							    fos.write(data, 0, bytesRead);
+							}
 							fos.close();
+
 							}
 							catch(Exception e){
 								response.sendRedirect("GeneralError");
@@ -128,18 +131,21 @@ public class ProductControl extends HttpServlet {
 						String imageFileName=file.getSubmittedFileName();
 						//System.out.println("Immagine selezionata: "+imageFileName);
 						
-						String uploadPath="C:/Users/matte/git/BurnHouse/BurnHouse/WebContent/Immagini/"+imageFileName;
+						String uploadPath="C:/Users/matte/eclipse-workspace 2023/Burn_House/src/main/webapp/Immagini/"+imageFileName;
 						//System.out.println("Upload Path: "+uploadPath);
 					
 						
 						try {
 							FileOutputStream fos = new FileOutputStream(uploadPath);
-							InputStream is =file.getInputStream();
-							
+							InputStream is = file.getInputStream();
+
 							byte[] data = new byte[is.available()];
-							is.read(data);
-							fos.write(data);
+							int bytesRead;
+							while ((bytesRead = is.read(data)) != -1) {
+							    fos.write(data, 0, bytesRead);
+							}
 							fos.close();
+
 							}
 							catch(Exception e){
 								response.sendRedirect("GeneralError");

@@ -19,7 +19,7 @@
 %>
 
 <!DOCTYPE html>
-<html lang="it">
+<html>
 <%@ page contentType="text/html; charset=UTF-8" import="java.util.*,model.ProductBean"%>
 <%@ page import="java.io.OutputStream" %>
 <%@ include file="Header.jsp" %>
@@ -38,6 +38,9 @@
 <body>
 
 
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
   $(document).ready(function(){
 	  $("#menu").hide(); // Nasconde il menu all'avvio

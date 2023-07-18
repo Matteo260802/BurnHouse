@@ -431,7 +431,7 @@
 	
   .card-container {
     display: inline-grid;
-    padding: 1.38%;
+    padding: 2%;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0;
