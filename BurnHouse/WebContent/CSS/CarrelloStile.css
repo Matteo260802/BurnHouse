@@ -226,6 +226,10 @@ a:hover {
   text-decoration: none;
 }
 
+a.button:hover {
+  background-color: #bf3364;
+}
+
 .button {
   display: inline-block;
   padding: 6px 12px;
