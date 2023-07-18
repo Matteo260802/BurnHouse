@@ -1,12 +1,12 @@
 @charset "ISO-8859-1";
 body{
-	background-color: #f3f3f3;
-	display:flex;
-	flex-direction: column;
-	min-height: 100vh;
+  background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
 }
     
-    .corpo {
+    corpo {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -15,9 +15,8 @@ body{
     }
     
     .footer{
-    	margin-top: auto;
+     margin-top: auto;
     }
-    
     
 	   .foto {
 	    display: flex;
@@ -146,7 +145,7 @@ a.info:hover{
     
     
 .rectangle {
-  width: 240px;
+  width: 200px;
   height: 20px;
   background-color: #f1f1f1;
   border: 1px solid #ccc;

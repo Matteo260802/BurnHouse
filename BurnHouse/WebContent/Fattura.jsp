@@ -46,12 +46,12 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
 	
 
 	<%
-	
-	
+	String Ordine=request.getParameter("nOrdine");
+	int nOrdine = Integer.parseInt(Ordine);
     OrderDAO model = new OrderDAO();
+    Collection<CartProduct> products = model.DoRetrieveByOrder(nOrdine);
     String codice=request.getParameter("code");
     int cod=Integer.parseInt(codice);
-    Collection<CartProduct> products = model.DoRetrieveByOrder(cod);
     Orderbean ordine = model.DoRetrieveByKey(cod);
 	%>
 
@@ -65,25 +65,28 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   
   
   <%
- 	HttpSession ses=request.getSession();
+  String data=request.getParameter("data");
+  String nome=request.getParameter("nome");
+  String cognome=request.getParameter("cognome");
+  String indirizzo=ordine.GetInd();
   %>
   
   <table>
     <tr>
       <th>Numero fattura:</th>
-      <td><%=ordine.GetCode() %></td>
+      <td><%=nOrdine %></td>
     </tr>
     <tr>
       <th>Data fatturazione:</th>
-      <td><%=ordine.GetDate()%></td>
+      <td><%=data%></td>
     </tr>
     <tr>
       <th>Cliente:</th>
-      <td><%=ses.getAttribute("nome")%> <%=ses.getAttribute("cognome")%></td>
+      <td><%=nome%> <%=cognome%></td>
     </tr>
     <tr>
       <th>Indirizzo di spedizione:</th>
-      <td><%=ordine.GetInd()%></td>
+      <td><%=indirizzo%></td>
     </tr>
   </table>
   
@@ -96,6 +99,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
       <th>Prodotto</th>
       <th>Quantità</th>
       <th>Prezzo unitario</th>
+      <th>Iva</th>
       <th>Totale</th>
     </tr>
     
@@ -103,8 +107,10 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
     <tr>
       <td><%=bean.GetNome() %></td>
       <td><%=bean.GetQuantita() %></td>
-      <td><%=bean.GetPrezzo() %>€</td>
-      <td><%=bean.GetPrezzo()*bean.GetQuantita() %>€</td>
+      <td><%=String.format("%.2f",bean.GetPrezzo()) %>€</td>
+      <% double iva = (bean.GetPrezzo()*22)/100; %>
+      <td><%= String.format("%.2f",iva) %>€</td>
+      <td><%=String.format("%.2f",(bean.GetPrezzo()+iva)*bean.GetQuantita()) %>€</td>
     </tr>
 	<%} %>  
   </table>
