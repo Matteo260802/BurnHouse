@@ -22,7 +22,7 @@
           <ul>
             <li class= "selected">+39 079 261905</li>
             <li>Lun - Ven 10:00 - 19:00</li>
-            <li>info@rau.it</li>
+            <li>info@burnhouse.com</li>
             <li>(07100) Sassari</li>
             <li>Z.I. Predda Niedda Sud strada 15</li>
           </ul>
