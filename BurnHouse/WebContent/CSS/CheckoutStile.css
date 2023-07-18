@@ -465,9 +465,7 @@ h1{
   font-size: 20%;
 }
 
-.parte-inferiore{
-	
-}
+
 
 
 	@media only screen and (min-width:769px) and (max-width:1024px){
@@ -476,9 +474,9 @@ h1{
 	display:flex;
 	flex-direction:row;
 	border-radius:10px;
-
-	
-}
+    }
+    
+    
 	.IHead{
 	padding: 10px;
   	width: 200px;
@@ -486,11 +484,7 @@ h1{
     }
     
     
-    .IHead{
-	padding: 10px;
-  	width: 200px;
-  	margin-left: 50px;
-    }
+  
 
 	#concludi{
 	width:12%;
@@ -542,26 +536,84 @@ h1{
 	.indirizzi, .metodi{
 	justify-content:center;
 	width:100%;
+	
 	}
 	
-	.indirizzo, .metodo{
-	justify-content:center;
-	margin-left:65px;
-	width:100%;
-	font-size:20px;
+	.indirizzo{
+	background-color: #449db7;
+	height: 100px;
+	width: 190px;
+	margin-left: 50px;
+	margin-top: 20px;
+
+	padding: 20px;
+    border-radius: 10px;
+    font-family: "Ubuntu", sans-serif;
 	}
+	
+	.metodo{
+	   background-color: #449db7;
+	height: 100px;
+	width: 190px;
+	margin-left: 0px;
+	margin-top: 20px;
+
+	padding: 20px;
+    border-radius: 10px;
+    font-family: "Ubuntu", sans-serif;
+	}
+	
+	.rettangolo-carta{
+	display: block;
+  font-size: 24px;
+  text-align: left;
+  align-items: center;
+  line-height: 1.5;
+   }
+	
 	.MHead{
 	padding: 10px;
   	width: 200px;
-  	margin-left: 50px;
+  	margin-left: 5px;
 	} 
   	
   	.IHead{
 	padding: 10px;
   	width: 200px;
-  	margin-left: 50px;
+  	margin-left: 55px;
     }
+    
+    .cornice{
+  width: 185px;
+  height: 26px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  color: #fff;
+  padding: 2px;
+  margin-bottom: 10px;
+} 
 
+  .cornice1{
+  width: 185px;
+  height: 26px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  color: #fff;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+
+.cornice h2{
+	font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.cornice1 h2{
+	font-size: 18px;
+  font-family: "Ubuntu", sans-serif;
+}
 
 	#concludi{
 	position:relative;
