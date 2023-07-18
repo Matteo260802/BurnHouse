@@ -60,7 +60,6 @@ public class IndirizziServlet extends HttpServlet {
 		
 			} catch (Exception e) {
 				response.sendRedirect("GeneralError.jsp");
-				e.printStackTrace();
 			}
 		}else if(action.equals("show")) {
 			IndirizzoDAO richiesto=new IndirizzoDAO();
