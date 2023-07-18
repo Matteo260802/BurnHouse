@@ -65,7 +65,7 @@ for(CartProduct c: cart.GetCart()){
  				</div>
 </div>
 
-
+<div class="parte-inferiore">
 <form action="CheckoutServlet" method="POST" id="checkmate">
 <input type="hidden" name="action" value="insert">
 
@@ -80,7 +80,20 @@ for(CartProduct c: cart.GetCart()){
 	while(it.hasNext()){
 	IndirizzoBean ind=(IndirizzoBean)it.next();%>
 	<div class="indirizzo" onclick="checkedind('<%=ind.GetVia()%>')">
-	<input type="radio" name="via" value="<%=ind.GetVia() %>" required class="ind"><label for="via" id="rue"><%=ind.GetVia() %><br><%=ind.GetCitta() %></label>
+	<div class="rettangolo-carta">
+	   
+	   	<input type="radio" name="via" value="<%=ind.GetVia() %>" required class="ind"><label for="via" id="rue">
+	   	<div class="cornice">
+	   	   <h2><%=ind.GetVia() %></h2>
+	   	</div>
+	   	
+	   	<div class="cornice1">
+	   	   <h2><%=ind.GetCitta() %></h2>
+	   	</div>
+	   	</label>
+	   	
+	   
+	</div>
 	</div>
 	<%}} %>
 </div>
@@ -97,14 +110,26 @@ for(CartProduct c: cart.GetCart()){
 	while(i.hasNext()){
 	Pagamento carta=(Pagamento)i.next();%>
 	<div class="metodo" onclick="checkedind('<%=carta.GetNum()%>')">
-	<input type="radio" name="carta" value="<%=carta.GetNum() %>" required class="pag"><label for="carta"><%=carta.GetNum() %><br><%=carta.GetTitolare() %></label>
-
+	   <div class="rettangolo-carta">
+	      
+	         	   <input type="radio" name="carta" value="<%=carta.GetNum() %>" required class="pag"><label for="carta">
+        <div class="cornice">
+        <h2><%=carta.GetNum() %></h2>
+       </div>
+       
+       <div class="cornice1">
+        <h2><%=carta.GetTitolare() %></h2>
+       </div>
+       </label>
+	</div>
 	</div>
 <%}} %>
 </div>
 <input type="submit" value="Concludi" id="concludi">
 </form>
 </div>
+</div>
+
 <%@include file="Footer.jsp" %>
 </body>
 </html>
