@@ -220,15 +220,13 @@ h2.riepilogo{
 	font-size:20px;
 	margin:0 auto;
 	border-style:dotted;
-	margin-left: 50px;
-	margin-top: 100px;
 }
 
 input[type="radio"]{
 	display:none;
 }
 
-.MHead, .IHead{
+.MHead{
   font-weight: bold;
   display: inline-block;
   background-color: black;
@@ -242,6 +240,47 @@ input[type="radio"]{
   margin-left: 120px;
 }
 
+
+.IHead{
+  font-weight: bold;
+  display: inline-block;
+  background-color: black;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 10px;
+  width: 200px;
+  text-decoration: none;
+  margin-left: 120px;
+}
+
+.indirizzo{
+	background-color: #449db7;
+	height: 160px;
+	width: 250px;
+	margin-left: 80px;
+	margin-top: 20px;
+
+	padding: 20px;
+    border-radius: 10px;
+    font-family: "Ubuntu", sans-serif;
+}
+
+
+.metodo{
+	background-color: #449db7;
+	height: 160px;
+	width: 250px;
+	margin-left: 80px;
+	margin-top: 20px;
+
+	padding: 20px;
+    border-radius: 10px;
+    font-family: "Ubuntu", sans-serif;
+	
+}
+
 .indirizzo, .metodo{
 	margin-bottom:20px;
 	display:block;
@@ -251,10 +290,53 @@ input[type="radio"]{
 	
 }
 
+.rettangolo-carta{
+	display: block;
+  font-size: 24px;
+  text-align: left;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.cornice{
+  width: 245px;
+  height: 26px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  color: #fff;
+  padding: 2px;
+  margin-bottom: 25px;
+}
+
+.cornice h2{
+	font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+
+.cornice1{
+  width: 245px;
+  height: 26px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  color: #fff;
+  padding: 2px;
+  margin-bottom: 10px;
+}
+
+.cornice1 h2{
+	font-size: 20px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+
 form#checkmate{
 	display:flex;
 	flex-direction:row;
 	border-radius:10px;
+	width: 100%;
 }
 
 #concludi{
@@ -383,7 +465,9 @@ h1{
   font-size: 20%;
 }
 
-
+.parte-inferiore{
+	
+}
 
 
 	@media only screen and (min-width:769px) and (max-width:1024px){
@@ -395,11 +479,18 @@ h1{
 
 	
 }
-	.MHead, .IHead{
+	.IHead{
 	padding: 10px;
   	width: 200px;
   	margin-left: 50px;
-}
+    }
+    
+    
+    .IHead{
+	padding: 10px;
+  	width: 200px;
+  	margin-left: 50px;
+    }
 
 	#concludi{
 	width:12%;
@@ -459,11 +550,17 @@ h1{
 	width:100%;
 	font-size:20px;
 	}
-	.MHead, .IHead{
+	.MHead{
 	padding: 10px;
   	width: 200px;
   	margin-left: 50px;
-}
+	} 
+  	
+  	.IHead{
+	padding: 10px;
+  	width: 200px;
+  	margin-left: 50px;
+    }
 
 
 	#concludi{
