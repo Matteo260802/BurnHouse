@@ -71,7 +71,11 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   String data = "";
   
   if (dataParam != null && !dataParam.isEmpty()) {
-	  data = dataParam;
+	  if (dataParam.matches("\\d{2}-\\d{2}-\\d{4}")) {
+	  		data = dataParam;
+	  } else {
+		 	 data = "Data non valida";
+	  }
   }
   else{
 	  data = "Data mancante";
