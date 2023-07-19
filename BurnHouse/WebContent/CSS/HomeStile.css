@@ -373,6 +373,7 @@ Prodotti
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: transform 0.3s;
 }
 
 .discount-tag1 {
@@ -503,9 +504,7 @@ Prodotti
   margin-bottom: 10px;
 }
 
-.product-thumb1 {
-  transition: transform 0.3s;
-}
+
 
 .product-thumb1:hover {
   transform: scale(1.2);
@@ -567,6 +566,7 @@ Prodotti
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: transform 0.3s;
 }
 
 .discount-tag2 {
@@ -696,9 +696,7 @@ Prodotti
   margin-bottom: 10px;
 }
 
-.product-thumb2 {
-  transition: transform 0.3s;
-}
+
 
 .product-thumb2:hover {
   transform: scale(1.2);
@@ -759,6 +757,7 @@ Prodotti
   width: 100%;
   height: 100%;
   object-fit: contain;
+  transition: transform 0.3s;
 }
 
 .discount-tag3 {
@@ -894,9 +893,6 @@ Prodotti
   margin-bottom: 10px;
 }
 
-.product-thumb3 {
-  transition: transform 0.3s;
-}
 
 .product-thumb3:hover {
   transform: scale(1.2);

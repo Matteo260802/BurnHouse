@@ -61,10 +61,7 @@ body{
 }
 
 
-a.indlink:hover {
-  text-decoration: underline;
-  color: #ffb6c1;
-}
+
 
 a.indlink:link {
   text-decoration: none;

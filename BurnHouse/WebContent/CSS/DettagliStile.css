@@ -244,14 +244,13 @@ html, body {
 }
 
 @media only screen and (max-width: 600px) {
-  /* Mobile devices */
   .product-description h1 {
     font-size: 180%;
   }
 }
 
 @media only screen and (max-width: 1250px) {
-  /* Computer screens */
+
   .container {
     flex-direction: column;
     max-width: 100%;
@@ -278,6 +277,3 @@ html, body {
   }
 }
 
-html, body {
-  overflow-x: hidden;
-}
