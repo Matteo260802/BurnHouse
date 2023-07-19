@@ -20,10 +20,10 @@
         <div id="zonaleftfooter">
           <h1>Contatti</h1>
           <ul>
-            <li class= "selected">+39 079 261905</li>
+            <li class= "selected">+39 345 459 3456</li>
             <li>Lun - Ven 10:00 - 19:00</li>
             <li>info@burnhouse.com</li>
-            <li>(84086) Rocca Piemonte</li>
+            <li>(84086) Roccapiemonte</li>
             <li>Via Crocevia 19</li>
           </ul>
         </div>
