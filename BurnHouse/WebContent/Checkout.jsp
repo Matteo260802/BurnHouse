@@ -73,7 +73,9 @@ for(CartProduct c: cart.GetCart()){
 <% IndirizzoDAO richiesta=new IndirizzoDAO();
 	Collection<?> spedizione=richiesta.DoRetrieveByUser((String)request.getSession().getAttribute("email"));
 	if(spedizione==null || spedizione.isEmpty()){%>
+	<div class="primo">
 	<button class="ins"><a href="InsIndirizzo.jsp" class="vai">Inserisci indirizzo di spedizione</a></button>
+	</div>
 	<%}else{ 
 	%><div class="IHead">Indirizzi di spedizione</div> <% 	
 	Iterator it=spedizione.iterator();
@@ -103,8 +105,10 @@ for(CartProduct c: cart.GetCart()){
 <% PagamentoDAO richiesto=new PagamentoDAO(); 
 	Collection<Pagamento> metodi=richiesto.DoRetrieveByUser((String)request.getSession().getAttribute("email"));
 	if(metodi==null || metodi.isEmpty()){%>
-<button class="ins"><a href="InsMetodoPag.jsp" class="vai">Inserisci metodo di pagamento</a></button>
-<%}else{
+	<div class="secondo">
+	<button class="ins"><a href="InsMetodoPag.jsp" class="vai">Inserisci metodo di pagamento</a></button>
+	</div>
+	<%}else{
 	%><div class=MHead>Metodi di pagamento</div> <% 
 	Iterator i=metodi.iterator();
 	while(i.hasNext()){

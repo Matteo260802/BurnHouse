@@ -408,32 +408,13 @@ input[type="radio"]:checked + label::after{
 
 
 
+
+
+
 .ins {
-	/*
   display: inline-block;
-  background-color: #4CAF50;
-  border: none;
-  color: white;
-  text-align: center;
-  font-size: 16px;
-  padding: 10px;
-  width: 200px;
-  cursor: pointer;
-  text-decoration: none;
-  */
-  
   font-family: "Roboto", sans-serif;
-    font-weight: bold;
-    font-size: 17px;
-    padding: 10px 20px 5px 20px;
-    cursor: pointer;
-    position: relative;
-    user-select: none;
-}
-
-
-.ins {
-  display: inline-block;
+  font-weight: bold;
   background-color: #751f3d;
   border: none;
   color: white;
@@ -625,4 +606,17 @@ h1{
 	
 	}
 	
-	}
+	.ins {
+	width: 50%;
+	  margin-bottom:10%;
+	  }
+	  
+	  .primo{
+	  margin-left:2.9%;
+	  }
+	  
+	 .secondo{
+	 margin-left:-9%;
+	 }
+	
+}
