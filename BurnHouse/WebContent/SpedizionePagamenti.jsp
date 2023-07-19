@@ -44,7 +44,69 @@
       Le spese di spedizione per tutto il territorio italiano hanno un costo legato al peso e alla destinazione. Diventano gratuite per ordini superiori ai 69€. La spedizione è affidata a un corriere espresso: GLS, BRT, SDA, TNT..
       <br>La spedizione è ASSICURATA fino al ritiro del pacco da parte del Cliente.   
       </p>
+      
+      
+      
+      <strong>Tracking della spedizione</strong>
+   <strong>
+      <em>
+         <br>
+      </em>
+   </strong>
+      <p>
 
+      Una volta che il pacco è stato spedito, riceverai un numero di tracking tramite email o SMS. Questo ti permette di monitorare 
+      lo stato della tua spedizione e conoscere la sua posizione durante il trasporto.
+
+
+
+      </p>
+
+      <br>
+      <br>
+      
+      
+      
+      <strong>Modalità di consegna</strong>
+   <strong>
+      <em>
+         <br>
+      </em>
+   </strong>
+      <p>
+
+       Il corriere espresso incaricato consegnerà il pacco direttamente all'indirizzo di destinazione fornito durante l'acquisto. 
+       Se non sei presente al momento della consegna, potrebbe essere lasciato un avviso per ritirare il pacco presso un punto di 
+       ritiro designato o sarà programmata una seconda consegna.
+
+
+
+      </p>
+
+      <br>
+      <br>
+      
+      
+      <strong>Costi di spedizione internazionali</strong>
+   <strong>
+      <em>
+         <br>
+      </em>
+   </strong>
+      <p>
+
+       Se l'ordine viene effettuato da un paese diverso dall'Italia, le spese di spedizione possono variare a seconda del paese 
+       di destinazione e del peso dell'ordine. Ti consiglio di verificare le tariffe di spedizione specifiche al momento dell'
+       acquisto.
+
+
+
+      </p>
+
+      <br>
+      <br>
+      
+ 
 
    </div>
 
