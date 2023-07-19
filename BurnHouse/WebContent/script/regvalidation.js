@@ -6,7 +6,7 @@
 
 function checkemail(email){
 	
-	let pattern=/^\w+([.-]{1}\w+)*@\w+([.-]{1}\w+)*(\.\w{2,3})+$/;
+	let pattern=/^\w+([.-]\w+)*@\w+([.-]\w+)*(\.\w{2,3})+$/;
 	if(email.value.match(pattern)){
 		return true;
 	}
@@ -15,7 +15,7 @@ function checkemail(email){
 
 function checkname(nome){
 	
-	let pattern=/^[A-Za-z]+([\s'-]{1}[A-Za-z]+)*$/;
+	let pattern=/^[A-Za-z]+([\s'-][A-Za-z]+)*$/;
 	if(nome.value.match(pattern)){
 		return true;
 	}
@@ -24,7 +24,7 @@ function checkname(nome){
 
 function checksurname(cognome){
 	
-	let pattern=/^[A-Za-z]+([\s'-]{1}[A-Za-z]+)*$/;
+	let pattern=/^[A-Za-z]+([\s'-][A-Za-z]+)*$/;
 	if(cognome.value.match(pattern)){
 		return true;
 	}
