@@ -28,12 +28,12 @@ public class ProductModelDS implements ProductModel {
 			ds = (DataSource) envCtx.lookup("jdbc/burn_house");
 
 		} catch (NamingException e) {
-			System.out.println("Error:" + e.getMessage());
+			System.err.println("Error:" + e.getMessage());
 		}
 	}
 
 	private static final String TABLE_NAME = "product";
-	
+
 
 
 	@Override
@@ -96,7 +96,7 @@ public class ProductModelDS implements ProductModel {
 			String selectSQL = "SELECT * FROM " + ProductModelDS.TABLE_NAME;
 
 			 if (order != null && !order.isEmpty()) {
-			         String validatedOrder = validateOrder(order);
+			        String validatedOrder = validateOrder(order);
 			        if (validatedOrder != null) {
 			            selectSQL += " ORDER BY " + validatedOrder;
 			        }
@@ -157,7 +157,7 @@ public class ProductModelDS implements ProductModel {
 			preparedStatement.setInt(8, product.getCapacity());
 			preparedStatement.executeUpdate();
 
-			//connection.setAutoCommit(false);
+			
 			connection.commit();
 		} finally {
 			try {
@@ -281,7 +281,7 @@ public class ProductModelDS implements ProductModel {
 			}
 		}
 		
-		//products.forEach(e -> System.out.println(e.getName()+", "+e.getDegree()));
+		
 		return products;
 	}
 

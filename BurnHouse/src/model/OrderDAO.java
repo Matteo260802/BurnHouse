@@ -26,7 +26,7 @@ public class OrderDAO {
 			ds = (DataSource) envCtx.lookup("jdbc/burn_house");
 
 		} catch (NamingException e) {
-			System.out.println("Error:" + e.getMessage());
+			System.err.println("Error:" + e.getMessage());
 		}
 	}
 	private static  final String table_name="ordine";
@@ -296,7 +296,7 @@ public class OrderDAO {
 			query=con.prepareStatement(quer1);
 			query2=con.prepareStatement(quer2);
 			
-			if(cart!=null &&(utente!=null && !utente.equals("") && (indirizzo!=null && !indirizzo.equals("") && (carta!=null && !carta.equals(""))))) {
+			if((utente!=null && !utente.equals("") && (indirizzo!=null && !indirizzo.equals("") && (carta!=null && !carta.equals(""))))) {
 				
 				query.setDouble(1,cart.TotalAmount()+tasse);
 				query.setString(2, indirizzo);

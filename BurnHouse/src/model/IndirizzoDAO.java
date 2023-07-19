@@ -26,7 +26,7 @@ public class IndirizzoDAO {
 			ds = (DataSource) envCtx.lookup("jdbc/burn_house");
 
 		} catch (NamingException e) {
-			System.out.println("Error:" + e.getMessage());
+			System.err.println("Error:" + e.getMessage());
 		}
 	}
 
@@ -114,7 +114,7 @@ public class IndirizzoDAO {
 			query2=con.prepareStatement(quer2);
 			
 			
-			if((via!=null && !via.equals(""))&&(cap!=null && !cap.equals(""))&&(citta!=null && !citta.equals(""))&&(!utente.equals("") && utente!=null)) {
+			if((via!=null && !via.equals(""))&&(cap!=null && !cap.equals(""))&&(citta!=null && !citta.equals(""))&&(utente!=null && !utente.equals(""))) {
 				if(!ind.GetVia().equals(via)||!ind.GetCap().equals(cap)||!ind.GetCitta().equals(citta)) {
 				query.setString(1, via);
 				query.setString(2, cap);

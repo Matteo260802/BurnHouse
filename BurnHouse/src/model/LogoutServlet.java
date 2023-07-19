@@ -19,7 +19,7 @@ public class LogoutServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.getSession().removeAttribute("adminRoles");
-		//request.getSession().invalidate();
+		
 		request.getSession().setAttribute("adminFilter", false);
 		request.getSession().setAttribute("userFilter", false);
 		request.getSession().removeAttribute("nome");
