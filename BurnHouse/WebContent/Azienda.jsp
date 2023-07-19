@@ -38,7 +38,7 @@
              online gli stessi valori di sempre: massima attenzione alle esigenze del cliente, scelta accurata di ogni singola 
              etichetta proposta, rapporti duraturi con i nostri fornitori e clienti.
           </p>
-         <!-- <button class="abcta-button">Learn More</button>-->
+         
        </div>
        <div class="abhero-image">
            <img class="abimg" src="${pageContext.request.contextPath}/Immagini/fondatore.jpg" alt="whisky">
@@ -67,7 +67,7 @@
              Un amore che traspare anche dallo sguardo del nostro Marco, qui mentre ha in braccio una bottiglia di Gin Genesi, la 
              nostra linea speciale di alta gamma.
           </p>
-          <!-- <button class="abcta-button">Learn More</button> -->
+         
        </div>
        
     </div>
@@ -87,7 +87,7 @@
              adatta all’occasione; proporre sempre e solo prodotti di qualità che vi portino ad apprezzare fino in fondo la bellezza
               di una degustazione; tramandarvi la nostra filosofia del bere responsabilmente.
           </p>
-          <!--  <button class="abcta-button">Learn More</button>-->
+        
        </div>
        <div class="abhero-image">
           <img class="abimg" src="${pageContext.request.contextPath}/Immagini/famiglia.jpeg" alt="whisky">

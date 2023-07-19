@@ -239,16 +239,8 @@
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 62px;
-}
 
-.navbar .menu-items {
-  display: flex;
-}
+
 
 .navbar .nav-container li {
   list-style: none;
