@@ -34,7 +34,7 @@ public class IndirizzoDAO {
 	public synchronized IndirizzoBean DoRetrieveByKey(String via, String cap, String citta) throws SQLException {
 	    Connection con = null;
 	    PreparedStatement query = null;
-	    String quer = "SELECT * FROM " + table_name + " WHERE via=? AND cap=? AND citta=?";
+	    String quer = "SELECT * FROM " + IndirizzoDAO.table_name + " WHERE via=? AND cap=? AND citta=?";
 	    IndirizzoBean ind = new IndirizzoBean();
 
 	    try {
@@ -71,7 +71,7 @@ public class IndirizzoDAO {
 		
 		IndirizzoBean ind=new IndirizzoBean();
 		ArrayList<IndirizzoBean> indirizzi=new ArrayList<IndirizzoBean>();
-		String quer="Select * From "+table_name+" Order by ?";
+		String quer="Select * From "+IndirizzoDAO.table_name+" Order by ?";
 		try {
 			con=ds.getConnection();
 			query=con.prepareStatement(quer);
@@ -103,8 +103,8 @@ public class IndirizzoDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		PreparedStatement query2=null;
-		String quer1="INSERT INTO "+table_name+" Values(?,?,?)";
-		String quer2="INSERT INTO "+table2_name+" VALUES(?,?,?,?)";
+		String quer1="INSERT INTO "+IndirizzoDAO.table_name+" Values(?,?,?)";
+		String quer2="INSERT INTO "+IndirizzoDAO.table2_name+" VALUES(?,?,?,?)";
 		IndirizzoBean ind=new IndirizzoBean();
 		ind=this.DoRetrieveByKey(via, cap, citta);
 		
@@ -154,8 +154,8 @@ public class IndirizzoDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		PreparedStatement query2=null;
-		String quer1="DELETE FROM "+table_name+" WHERE via=? AND cap=? AND citta=?";
-		String quer2="DELETE FROM "+table2_name+" WHERE utente=? AND via=? AND cap=? AND citta=?";
+		String quer1="DELETE FROM "+IndirizzoDAO.table_name+" WHERE via=? AND cap=? AND citta=?";
+		String quer2="DELETE FROM "+IndirizzoDAO.table2_name+" WHERE utente=? AND via=? AND cap=? AND citta=?";
 		try {
 			con=ds.getConnection();
 			query=con.prepareStatement(quer1);
@@ -196,7 +196,7 @@ public class IndirizzoDAO {
 	public synchronized ArrayList<IndirizzoBean> DoRetrieveByUser(String user) throws SQLException{
 		Connection con=null;
 		PreparedStatement query=null;
-		String quer="Select via,cap,citta from "+table2_name+" Where utente=?";
+		String quer="Select via,cap,citta from "+IndirizzoDAO.table2_name+" Where utente=?";
 		ArrayList<IndirizzoBean> indirizzi=new ArrayList<IndirizzoBean>();
 		
 		try {

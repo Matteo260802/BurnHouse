@@ -33,6 +33,11 @@ public class CartController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String action=request.getParameter("action"); 
 		Carrello cart=(Carrello)request.getSession().getAttribute("cart");
+		String ind=request.getParameter("index");
+		int index=0;
+		if(ind!=null && !ind.equals("")) {
+			index=Integer.parseInt(ind);
+		}
 		if(cart==null)
 		{
 			 cart = new Carrello();
@@ -46,16 +51,16 @@ public class CartController extends HttpServlet {
 		cart.RemovetoCart(Integer.parseInt(request.getParameter("id")));	
 		}
 		else if(action.equals("Increment")){
-			cart.GetCart().get(Integer.parseInt(request.getParameter("index"))).IncrQuantita();
+			cart.GetCart().get(index).IncrQuantita();
 		}else if(action.equals("Decrement")){
 			
-			if(cart.GetCart().get(Integer.parseInt(request.getParameter("index"))).GetQuantita()==1) {
+			if(cart.GetCart().get(index).GetQuantita()==1) {
 				request.getSession().setAttribute("cart", cart);
 				RequestDispatcher disp=getServletContext().getRequestDispatcher("/Carrello.jsp");
 				disp.forward(request, response);
 				
 			}else {
-				cart.GetCart().get(Integer.parseInt(request.getParameter("index"))).DecrQuantita();
+				cart.GetCart().get(index).DecrQuantita();
 			}
 			
 		}else if(action.equals("resetCart")) {

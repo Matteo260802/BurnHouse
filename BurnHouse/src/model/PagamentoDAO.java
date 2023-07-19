@@ -32,7 +32,7 @@ public class PagamentoDAO {
 			Connection con=null;
 			PreparedStatement query=null;
 			Pagamento pago=new Pagamento();
-			String quer="Select * from "+table_name+" Where num_carta=? AND utente=?";
+			String quer="Select * from "+PagamentoDAO.table_name+" Where num_carta=? AND utente=?";
 			try {
 				con=ds.getConnection();
 				query=con.prepareStatement(quer);
@@ -64,7 +64,7 @@ public class PagamentoDAO {
 			Connection con=null;
 			PreparedStatement query=null;
 			LinkedList<Pagamento> metodi=new LinkedList<Pagamento>();
-			String quer="Select * from "+table_name+" Order by ?";
+			String quer="Select * from "+PagamentoDAO.table_name+" Order by ?";
 			
 			try {
 				con=ds.getConnection();
@@ -98,7 +98,7 @@ public class PagamentoDAO {
 			Connection con=null;
 			PreparedStatement query=null;
 			LinkedList<Pagamento> metodi=new LinkedList<Pagamento>();
-			String quer="Select * from "+table_name+" Where utente=?";
+			String quer="Select * from "+PagamentoDAO.table_name+" Where utente=?";
 			try {
 			con=ds.getConnection();
 			query=con.prepareStatement(quer);
@@ -131,7 +131,7 @@ public class PagamentoDAO {
 			Connection con=null;
 			PreparedStatement query=null;
 			Pagamento pago=this.DoRetrieveByKey(num,user);
-			String quer="INSERT INTO "+table_name+" VALUES(?,?,?,?)";
+			String quer="INSERT INTO "+PagamentoDAO.table_name+" VALUES(?,?,?,?)";
 			
 			if(pago.GetNum().equals(num) && pago.GetUtente().equals(user)) {System.out.println("sono"); return false;}
 			
@@ -160,7 +160,7 @@ public class PagamentoDAO {
 		public synchronized void DoDelete(String num, String user) throws SQLException{
 			Connection con=null;
 			PreparedStatement query=null;
-			String quer="DELETE FROM "+table_name+" WHERE num_carta=? AND utente=?";
+			String quer="DELETE FROM "+PagamentoDAO.table_name+" WHERE num_carta=? AND utente=?";
 			try {
 				con=ds.getConnection();
 				query=con.prepareStatement(quer);

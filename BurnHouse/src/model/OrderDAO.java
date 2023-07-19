@@ -37,7 +37,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		Orderbean order=new Orderbean();
-		String quer="SELECT * FROM "+table_name+" WHERE codice=?";
+		String quer="SELECT * FROM "+OrderDAO.table_name+" WHERE codice=?";
 		
 		try {
 			con=ds.getConnection();
@@ -69,7 +69,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
-		String quer="SELECT * FROM "+table_name+" ORDER BY ?";
+		String quer="SELECT * FROM "+OrderDAO.table_name+" ORDER BY ?";
 		try {
 			con=ds.getConnection();
 			query=con.prepareStatement(quer);
@@ -105,7 +105,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
-		String quer="Select * from "+table_name+" where utente=?";
+		String quer="Select * from "+OrderDAO.table_name+" where utente=?";
 		
 		try {
 			con=ds.getConnection();
@@ -142,7 +142,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
-		String quer="Select * from "+table_name+" where data_effettuazione between ? and ?";
+		String quer="Select * from "+OrderDAO.table_name+" where data_effettuazione between ? and ?";
 		
 		try {
 			con=ds.getConnection();
@@ -180,7 +180,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
-		String quer="Select * from "+table_name+" where data_effettuazione between ? and ? and utente = ?";
+		String quer="Select * from "+OrderDAO.table_name+" where data_effettuazione between ? and ? and utente = ?";
 		
 		try {
 			con=ds.getConnection();
@@ -220,7 +220,7 @@ public class OrderDAO {
 		PreparedStatement query=null;
 		LinkedList <CartProduct> prod=new LinkedList<CartProduct>();
 		ProductModelDS prodotto=new ProductModelDS();
-		String quer="SELECT * FROM "+table2_name+" WHERE num_ordine=?";
+		String quer="SELECT * FROM "+OrderDAO.table2_name+" WHERE num_ordine=?";
 		try {
 			con=ds.getConnection();
 			query=con.prepareStatement(quer);
@@ -253,8 +253,8 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		PreparedStatement query2=null;
-		String quer1="DELETE FROM "+table_name+" WHERE codice=?";
-		String quer2="Delete from "+table2_name+" where num_ordine=?";
+		String quer1="DELETE FROM "+OrderDAO.table_name+" WHERE codice=?";
+		String quer2="Delete from "+OrderDAO.table2_name+" where num_ordine=?";
 		
 		try {
 			con=ds.getConnection();
@@ -286,8 +286,8 @@ public class OrderDAO {
 		PreparedStatement query=null;
 		PreparedStatement query2=null;
 		//Orderbean order=new Orderbean();
-		String quer1="INSERT INTO "+table_name+" (prezzo,ind_spedizione,aliquota_IVA,utente,data_effettuazione,num_carta) VALUES(?,?,?,?,?,?)";
-		String quer2="INSERT INTO "+table2_name+" (num_ordine,prodotto,quantita) VALUES(?,?,?)";
+		String quer1="INSERT INTO "+OrderDAO.table_name+" (prezzo,ind_spedizione,aliquota_IVA,utente,data_effettuazione,num_carta) VALUES(?,?,?,?,?,?)";
+		String quer2="INSERT INTO "+OrderDAO.table2_name+" (num_ordine,prodotto,quantita) VALUES(?,?,?)";
 		Double tasse=(cart.TotalAmount()*22)/100;
 		LocalDate localDate=LocalDate.parse(date);
 		Date effettuazione=java.sql.Date.valueOf(localDate);
@@ -334,7 +334,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		int code=0;
-		String quer="Select MAX(codice)as maxcode From "+table_name;
+		String quer="Select MAX(codice)as maxcode From "+OrderDAO.table_name;
 		
 		try {
 			con=ds.getConnection();
@@ -359,7 +359,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
-		String quer="SELECT * FROM "+table_name;
+		String quer="SELECT * FROM "+OrderDAO.table_name;
 		try {
 			con=ds.getConnection();
 			query=con.prepareStatement(quer);

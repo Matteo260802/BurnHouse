@@ -17,7 +17,7 @@ function checkcitta(citta){
 } 
 
 function checkvia(via){
-	let pattern=/^[A-Za-z]+([-'\s]?\w+)*\s[1-9]{1}[0-9]{1,2}$/;
+	let pattern=/^[A-Za-z]+([-'\s]{1}\w+)*\s[1-9]{1}[0-9]{1,2}$/;
 	if(via.value.match(pattern)){
 		return true;
 	}
