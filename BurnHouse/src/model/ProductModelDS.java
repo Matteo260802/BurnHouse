@@ -33,7 +33,7 @@ public class ProductModelDS implements ProductModel {
 	}
 
 	private static final String TABLE_NAME = "product";
-
+	
 
 
 	@Override
@@ -93,22 +93,18 @@ public class ProductModelDS implements ProductModel {
 
 			Collection<ProductBean> products = new LinkedList<ProductBean>();
 
-			String selectSQL = "SELECT * FROM " + ProductModelDS.TABLE_NAME + " ORDER BY ?";
+			String selectSQL = "SELECT * FROM " + ProductModelDS.TABLE_NAME;
 
-			 
-
-		    try {
-
-		        connection = ds.getConnection();
-		        preparedStatement = connection.prepareStatement(selectSQL);
-		        
-		        if (order != null && !order.isEmpty()) {
-			        String validatedOrder = validateOrder(order);
+			 if (order != null && !order.isEmpty()) {
+			         String validatedOrder = validateOrder(order);
 			        if (validatedOrder != null) {
-			            preparedStatement.setString(1,validatedOrder);
-			            
+			            selectSQL += " ORDER BY " + validatedOrder;
 			        }
 			    }
+
+		    try {
+		        connection = ds.getConnection();
+		        preparedStatement = connection.prepareStatement(selectSQL);
 		        
 		        
 				ResultSet rs = preparedStatement.executeQuery();

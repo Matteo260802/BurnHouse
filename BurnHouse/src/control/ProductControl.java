@@ -194,7 +194,7 @@ public class ProductControl extends HttpServlet {
 		
 		
 		String sort = request.getParameter("sort");
-
+		
 		try {
 			request.removeAttribute("products");
 			request.setAttribute("products", model.doRetrieveAll(sort));
@@ -212,7 +212,7 @@ public class ProductControl extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException{
 		String action=request.getParameter("action");
-		if(!action.equals(null)) {
+		if(action!=null) {
 	
 		
 		if(action.equalsIgnoreCase("ajax")) {

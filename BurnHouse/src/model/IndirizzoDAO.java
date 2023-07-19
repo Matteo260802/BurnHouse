@@ -141,7 +141,7 @@ public class IndirizzoDAO {
 				}
 			}finally {
 				try {
-				if(query2!=null)query.close();	
+				if(query2!=null)query2.close();	
 				
 				}finally {
 				if(con!=null)con.close();
