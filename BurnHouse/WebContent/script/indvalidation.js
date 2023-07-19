@@ -50,10 +50,5 @@ function validate(obj){
 		$("#val3").html("Città non valida, solo caratteri separati da spazio e -");
 	}
 	
-	if(valid){ 
-		obj.submit();
-	
-	}else{
-		obj.reset();
-	}
+	return valid;
 }

@@ -153,26 +153,24 @@ public class IndirizzoDAO {
 	public synchronized void DoDelete(String via, String cap, String citta,String utente) throws SQLException{
 		Connection con=null;
 		PreparedStatement query=null;
-		PreparedStatement query2=null;
-		String quer1="DELETE FROM "+IndirizzoDAO.table_name+" WHERE via=? AND cap=? AND citta=?";
-		String quer2="DELETE FROM "+IndirizzoDAO.table2_name+" WHERE utente=? AND via=? AND cap=? AND citta=?";
+		
+		String quer="DELETE FROM "+IndirizzoDAO.table2_name+" WHERE utente=? AND via=? AND cap=? AND citta=?";
 		try {
 			con=ds.getConnection();
-			query=con.prepareStatement(quer1);
-			query2=con.prepareStatement(quer2);
+			query=con.prepareStatement(quer);
 			
-			if((via!=null && !via.equals(""))&&(cap!=null && !cap.equals(""))&&(citta!=null && !citta.equals(""))&&(!utente.equals("") && utente!=null)) {
-				query.setString(1, via);
-				query.setString(2, cap);
-				query.setString(3, citta);
-				query2.setString(1,utente);
-				query2.setString(2, via);
-				query2.setString(3, cap);
-				query2.setString(4, citta);
+			
+			if((via!=null && !via.equals(""))&&(cap!=null && !cap.equals(""))&&(citta!=null && !citta.equals(""))&&(utente!=null && !utente.equals(""))) {
+				query.setString(1,utente);
+				query.setString(2, via);
+				query.setString(3, cap);
+				query.setString(4, citta);
 				
-				query2.executeUpdate();
-				query.executeUpdate();				
-				
+				query.executeUpdate();
+				ArrayList<IndirizzoBean> prova=this.DoRetrieveByFKey(via, cap, citta);
+				if(prova.isEmpty()) {
+					this.DoDeleteDef(via, cap, citta);
+				}
 				
 			}
 		}finally {
@@ -180,9 +178,6 @@ public class IndirizzoDAO {
 				if(query!=null) {
 					query.close();
 				}
-			}finally {
-				try {
-				if(query2!=null)query2.close();
 					
 				}finally {
 				if(con!=null)con.close();
@@ -190,7 +185,7 @@ public class IndirizzoDAO {
 				}
 			
 		}
-	}
+	
 	
 	
 	public synchronized ArrayList<IndirizzoBean> DoRetrieveByUser(String user) throws SQLException{
@@ -227,6 +222,75 @@ public class IndirizzoDAO {
 		}
 		return indirizzi;
 	}
+	
+	public synchronized ArrayList<IndirizzoBean> DoRetrieveByFKey(String via, String cap, String citta) throws SQLException {
+	    Connection con = null;
+	    PreparedStatement query = null;
+	    String quer = "SELECT * FROM " + IndirizzoDAO.table2_name + " WHERE via=? AND cap=? AND citta=?";
+	    ArrayList<IndirizzoBean> indi = new ArrayList<IndirizzoBean>();
+
+	    try {
+	        con = ds.getConnection();
+	        query = con.prepareStatement(quer);
+	        if ((via != null && !via.equals("")) && (cap != null && !cap.equals("")) && (citta != null && !citta.equals(""))) {
+	            query.setString(1, via);
+	            query.setString(2, cap);
+	            query.setString(3, citta);
+
+	            ResultSet res = query.executeQuery();
+	            if (res.next()) {
+	            	IndirizzoBean ind=new IndirizzoBean();
+	                ind.SetVia(res.getString("via"));
+	                ind.SetCap(res.getString("cap"));
+	                ind.SetCitta(res.getString("citta"));
+	                indi.add(ind);
+	            }
+	            res.close();
+	        }
+	    } finally {
+	        try {
+	            if (query != null)
+	                query.close();
+	        } finally {
+	            if (con != null)
+	                con.close();
+	        }
+	    }
+	    return indi;
+	}
+	
+	public synchronized void DoDeleteDef(String via, String cap, String citta) throws SQLException{
+		Connection con=null;
+		PreparedStatement query=null;
+		
+		String quer="DELETE FROM "+IndirizzoDAO.table_name+" WHERE via=? AND cap=? AND citta=?";
+		try {
+			con=ds.getConnection();
+			query=con.prepareStatement(quer);
+			
+			
+			if((via!=null && !via.equals(""))&&(cap!=null && !cap.equals(""))&&(citta!=null && !citta.equals(""))) {
+				query.setString(1, via);
+				query.setString(2, cap);
+				query.setString(3, citta);
+				
+				query.executeUpdate();
+								
+				
+				
+			}
+		}finally {
+			try {
+				if(query!=null) {
+					query.close();
+				}
+					
+				}finally {
+				if(con!=null)con.close();
+				}
+				}
+			
+		}
 	
 	
 }

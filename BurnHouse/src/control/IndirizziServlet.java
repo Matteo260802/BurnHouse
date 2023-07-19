@@ -84,7 +84,7 @@ public class IndirizziServlet extends HttpServlet {
 				
 				richiesto.DoDelete(ind.GetVia(),ind.GetCap(),ind.GetCitta(),utente);
 			} catch (Exception e) {
-				response.sendRedirect("GeneralError");
+				response.sendRedirect("GeneralError.jsp");
 			}
 		}
 		

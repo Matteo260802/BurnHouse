@@ -14,7 +14,7 @@
 <div id="regis">
 <h1>Metodo di pagamento già registrato</h1>
 <div class="regcontainer">
-		<form action="PagamentoControl" method="POST" class="registration">
+		<form action="PagamentoControl" method="POST" class="registration" onsubmit=" return validate(this)">
 			<h1 class="new">Inserisci i tuoi dati</h1>
 			<br>
 			<div class="overlay">
@@ -26,7 +26,7 @@
 		        	<h1>Scadenza</h1><input type="text" id="scadenza" name="scadenza" required placeholder="01/22" maxlength="10" class="reg">
 					<div id="val3"></div>
 					<br>
-					<button class="submitreg" onclick="validate(this.form)">Salva Metodo</button>
+					<button class="submitreg" >Salva Metodo</button>
 			</div>
 		</form>
 	</div>

@@ -16,7 +16,7 @@
 <div id="regis">
 <h1 class="new">Indirizzo già presente tra i tuoi</h1>
 <div class="regcontainer">
-		<form action="IndirizziServlet" method="POST" class="registration">
+		<form action="IndirizziServlet" method="POST" class="registration" onsubmit=" return validate(this)">
 			<h1 class="new">Inserisci i tuoi dati</h1>
 			<div class="overlay">
 				<input type="hidden" name="action" value="insert">
@@ -25,7 +25,7 @@
 		        	<input type="citta" id="citta" name="citta" required placeholder="Citta" class="reg"><div id="val3"></div>
 
 					<br>
-					<button class="submitreg" onclick="validate(this.form)">Salva Indirizzo</button>
+					<button class="submitreg">Salva Indirizzo</button>
 			</div>
 		</form>
 	</div>

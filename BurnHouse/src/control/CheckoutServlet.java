@@ -48,6 +48,7 @@ public class CheckoutServlet extends HttpServlet {
 				
 				String carta=request.getParameter("carta");
 				
+				
 				Date eff=new Date();
 				SimpleDateFormat effettuazione=new SimpleDateFormat("yyyy-MM-dd");
 				String date=effettuazione.format(eff);

@@ -11,7 +11,7 @@
 <script src="./script/jquery-3.5.1.js"></script>
 <script>
 function validation(obj){
-	const pattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	const pattern=/^\w+([\.-]{1}\w+)*@\w+([\.-]{1}\w+)*(\.\w{2,3})+$/;
 	
 	if(obj.email.value.match(pattern)){	
 		obj.form.submit();
@@ -19,7 +19,7 @@ function validation(obj){
 	else{
 		$("#val").html("Email non valida");
 		obj.email.focus();
-		obj.reset();
+		return false;
 		
 	}
 }
@@ -27,13 +27,13 @@ function validation(obj){
 
 <div class="container" id="container">
 	<div class="form-container sign-in-container">
-		<form action=LoginServlet method=post>
+		<form action=LoginServlet method=post onsubmit="validation(this)">
 			<h1>Accedi</h1>
 			<input type="email" name="email" placeholder="Email" required/>
 			<div id="val"></div>
 			<input type="password" name="password" placeholder="Password" required/>
 			<br>
-			<button onclick="validation(this.form)">Accedi</button>
+			<button>Accedi</button>
 		</form>
 	</div>
 	<div class="overlay-container">

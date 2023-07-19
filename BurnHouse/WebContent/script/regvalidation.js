@@ -68,11 +68,7 @@ function validate(obj){
 	
 
 	
-	if(valid){
-		obj.submit();
-	}else{
-		obj.reset();
-	}
+	return valid;
 }
 
 

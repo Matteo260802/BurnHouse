@@ -66,7 +66,8 @@ for(CartProduct c: cart.GetCart()){
 </div>
 
 <div class="parte-inferiore">
-<form action="CheckoutServlet" method="POST" id="checkmate">
+<div id="errato"></div>
+<form action="CheckoutServlet" method="POST" id="checkmate" onsubmit="return checkouterrato(this)">
 <input type="hidden" name="action" value="insert">
 
 <div class="indirizzi">
@@ -84,7 +85,7 @@ for(CartProduct c: cart.GetCart()){
 	<div class="indirizzo" onclick="checkedind('<%=ind.GetVia()%>')">
 	<div class="rettangolo-carta">
 	   
-	   	<input type="radio" name="via" value="<%=ind.GetVia() %>" required class="ind"><label for="via" id="rue">
+	   	<input type="radio" name="via" value="<%=ind.GetVia() %>" class="ind" required><label for="via" id="rue">
 	   	<div class="cornice">
 	   	   <h2><%=ind.GetVia() %></h2>
 	   	</div>
@@ -116,7 +117,7 @@ for(CartProduct c: cart.GetCart()){
 	<div class="metodo" onclick="checkedind('<%=carta.GetNum()%>')">
 	   <div class="rettangolo-carta">
 	      
-	         	   <input type="radio" name="carta" value="<%=carta.GetNum() %>" required class="pag"><label for="carta">
+	         	   <input type="radio" name="carta" value="<%=carta.GetNum() %>" class="pag" required><label for="carta">
         <div class="cornice">
         <h2><%=carta.GetNum() %></h2>
        </div>

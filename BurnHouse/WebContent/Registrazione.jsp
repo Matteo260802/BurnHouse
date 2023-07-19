@@ -14,7 +14,7 @@
 
 	<div id="regis">
 	<div class="regcontainer">
-		<form action="RegistrationServlet" method="POST" class="registration">
+		<form action="RegistrationServlet" method="POST" class="registration" onsubmit="return validate(this)">
 			<h1>Inserisci i tuoi dati</h1>
 			<div class="overlay">
 		        	<input type="text" id="nome" name="nome" required placeholder="Nome" class="reg"><div id="val1"></div>
@@ -25,7 +25,7 @@
 		        	<input type="date" id="data_nascita" name="data_nascita" required><div id="val4"></div>
 					<br>
 					<br>
-					<button  class="submitreg" onclick="validate(this.form)">Registrati</button>
+					<button  class="submitreg">Registrati</button>
 			</div>
 		</form>
 	</div>

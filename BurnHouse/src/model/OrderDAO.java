@@ -285,7 +285,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		PreparedStatement query2=null;
-		//Orderbean order=new Orderbean();
+		
 		String quer1="INSERT INTO "+OrderDAO.table_name+" (prezzo,ind_spedizione,aliquota_IVA,utente,data_effettuazione,num_carta) VALUES(?,?,?,?,?,?)";
 		String quer2="INSERT INTO "+OrderDAO.table2_name+" (num_ordine,prodotto,quantita) VALUES(?,?,?)";
 		Double tasse=(cart.TotalAmount()*22)/100;

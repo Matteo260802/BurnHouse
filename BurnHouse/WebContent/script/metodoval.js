@@ -49,11 +49,6 @@ function validate(obj){
 		$("#val3").html("Data non valida, formato MM/YY");
 	}
 	
-	if(valid){
-		obj.submit();
-	}
-	else{
-		obj.reset();
-	}
+	return valid;
 	
 }
