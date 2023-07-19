@@ -118,12 +118,7 @@ div.fattura a:hover {
 
 }
 
-.about {
-  flex-grow: 1; /* Permette al testo di espandersi e occupare lo spazio rimanente */
-  font-size: 20px;
-  color: black;
-  font-family: 'Montserrat', sans-serif;
-}
+
 
 .price {
   text-align: right;
@@ -131,19 +126,19 @@ div.fattura a:hover {
   float: right;
   line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
-  white-space: nowrap; /* Impedisce il testo di andare a capo */
+  white-space: nowrap; 
 }
 
 
 
 .orderimg {
-  width: 300px; /* Larghezza automatica per mantenere le proporzioni originali */
-  height: 300px; /* Imposta l'altezza desiderata per tutte le immagini */
+  width: 300px; 
+  height: 300px; 
   margin-right: 10px;
 }
 
 .about {
-  flex-grow: 1; /* Permette al testo di espandersi e occupare lo spazio rimanente */
+  flex-grow: 1; 
   font-size: 20px;
   color: black;
   font-family: 'Montserrat', sans-serif;
@@ -152,7 +147,7 @@ div.fattura a:hover {
 
 /*sotto*/
 .order-total {
-  width:65%;;
+  width:65%;
   margin: 0 auto;
   border-top-style: solid;
   border-top-width: 3px;
@@ -487,15 +482,6 @@ h1#riempi{
 
 
 
-
-/*bottone prova*/
-    /* COLORS */
-.container {
-  max-width: 1050px;
-  width: 90%;
-  margin: auto;
-}
-
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
@@ -533,6 +519,8 @@ h1#riempi{
   position: absolute;
   height: 60px;
 }
+
+
 
 .nav-container .checkbox {
   position: absolute;
