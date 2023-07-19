@@ -20,7 +20,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
       },
       jsPDF: {
         unit: 'mm',
-        format: 'a4',
+        format: 'a1',
         orientation: 'portrait'
       }
     };
@@ -140,6 +140,9 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
     <button id="downloadButton" onclick="downloadAsPDF()">Scarica fattura come PDF</button>
     <br>
     <button id="printButton" onclick="window.print();">Stampa fattura</button>
+    
+    <div style="height: 800px;"></div>
+    
   </div>
 </body>
 </html>
