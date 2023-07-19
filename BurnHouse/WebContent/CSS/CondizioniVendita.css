@@ -29,3 +29,7 @@ body {
     padding: 20px;
     line-height: 26px;
 }
+
+#page-body h1{
+	font-size: 14px;
+}
