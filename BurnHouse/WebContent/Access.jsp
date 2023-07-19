@@ -11,7 +11,7 @@
 <script src="./script/jquery-3.5.1.js"></script>
 <script>
 function validation(obj){
-	const pattern=/^\w+([\.-]{1}\w+)*@\w+([\.-]{1}\w+)*(\.\w{2,3})+$/;
+	const pattern=/^\w+([.-]{1}\w+)*@\w+([.-]{1}\w+)*(\.\w{2,3})+$/;
 	
 	if(obj.email.value.match(pattern)){	
 		obj.form.submit();

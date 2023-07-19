@@ -9,7 +9,7 @@ function checknum(carta){
 }
 
 function checktitol(titolare){
-	let pattern=/^[A-Za-z]+([\s'-]{1}[A-Za-z]+)*$/;
+	let pattern=/^[A-Za-z]+([\s'-][A-Za-z]+)*$/;
 	if(titolare.value.match(pattern)){
 		return true;
 	}

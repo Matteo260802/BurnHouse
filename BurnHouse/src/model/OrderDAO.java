@@ -26,10 +26,10 @@ public class OrderDAO {
 			ds = (DataSource) envCtx.lookup("jdbc/burn_house");
 
 		} catch (NamingException e) {
-			System.out.println("Error:" + e.getMessage());
+			System.err.println("Error:" + e.getMessage());
 		}
 	}
-	private static  final String table_name="ordine";
+	private static  final String table1_name="ordine";
 	private static  final String table2_name="inclusione";
 	
 	
@@ -37,7 +37,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		Orderbean order=new Orderbean();
-		String quer="SELECT * FROM "+OrderDAO.table_name+" WHERE codice=?";
+		String quer="SELECT * FROM "+OrderDAO.table1_name+" WHERE codice=?";
 		
 		try {
 			con=ds.getConnection();
@@ -69,7 +69,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
-		String quer="SELECT * FROM "+OrderDAO.table_name+" ORDER BY ?";
+		String quer="SELECT * FROM "+OrderDAO.table1_name+" ORDER BY ?";
 		try {
 			con=ds.getConnection();
 			query=con.prepareStatement(quer);
@@ -105,7 +105,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
-		String quer="Select * from "+OrderDAO.table_name+" where utente=?";
+		String quer="Select * from "+OrderDAO.table1_name+" where utente=?";
 		
 		try {
 			con=ds.getConnection();
@@ -142,7 +142,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
-		String quer="Select * from "+OrderDAO.table_name+" where data_effettuazione between ? and ?";
+		String quer="Select * from "+OrderDAO.table1_name+" where data_effettuazione between ? and ?";
 		
 		try {
 			con=ds.getConnection();
@@ -180,7 +180,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
-		String quer="Select * from "+OrderDAO.table_name+" where data_effettuazione between ? and ? and utente = ?";
+		String quer="Select * from "+OrderDAO.table1_name+" where data_effettuazione between ? and ? and utente = ?";
 		
 		try {
 			con=ds.getConnection();
@@ -253,7 +253,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		PreparedStatement query2=null;
-		String quer1="DELETE FROM "+OrderDAO.table_name+" WHERE codice=?";
+		String quer1="DELETE FROM "+OrderDAO.table1_name+" WHERE codice=?";
 		String quer2="Delete from "+OrderDAO.table2_name+" where num_ordine=?";
 		
 		try {
@@ -286,7 +286,7 @@ public class OrderDAO {
 		PreparedStatement query=null;
 		PreparedStatement query2=null;
 		
-		String quer1="INSERT INTO "+OrderDAO.table_name+" (prezzo,ind_spedizione,aliquota_IVA,utente,data_effettuazione,num_carta) VALUES(?,?,?,?,?,?)";
+		String quer1="INSERT INTO "+OrderDAO.table1_name+" (prezzo,ind_spedizione,aliquota_IVA,utente,data_effettuazione,num_carta) VALUES(?,?,?,?,?,?)";
 		String quer2="INSERT INTO "+OrderDAO.table2_name+" (num_ordine,prodotto,quantita) VALUES(?,?,?)";
 		Double tasse=(cart.TotalAmount()*22)/100;
 		LocalDate localDate=LocalDate.parse(date);
@@ -296,7 +296,7 @@ public class OrderDAO {
 			query=con.prepareStatement(quer1);
 			query2=con.prepareStatement(quer2);
 			
-			if(cart!=null &&(utente!=null && !utente.equals("") && (indirizzo!=null && !indirizzo.equals("") && (carta!=null && !carta.equals(""))))) {
+			if((utente!=null && !utente.equals("") && (indirizzo!=null && !indirizzo.equals("") && (carta!=null && !carta.equals(""))))) {
 				
 				query.setDouble(1,cart.TotalAmount()+tasse);
 				query.setString(2, indirizzo);
@@ -334,7 +334,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		int code=0;
-		String quer="Select MAX(codice)as maxcode From "+OrderDAO.table_name;
+		String quer="Select MAX(codice)as maxcode From "+OrderDAO.table1_name;
 		
 		try {
 			con=ds.getConnection();
@@ -359,7 +359,7 @@ public class OrderDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		LinkedList<Orderbean> ordini=new LinkedList<Orderbean>();
-		String quer="SELECT * FROM "+OrderDAO.table_name;
+		String quer="SELECT * FROM "+OrderDAO.table1_name;
 		try {
 			con=ds.getConnection();
 			query=con.prepareStatement(quer);

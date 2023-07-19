@@ -47,8 +47,7 @@ public class ProductControl extends HttpServlet {
 
 		
 		String action = request.getParameter("action");
-		//System.out.println("Azione eseguita");
-		//System.out.println(action);
+
 		
 		try {
 			if (action != null) {
@@ -75,14 +74,14 @@ public class ProductControl extends HttpServlet {
 						String tipo = request.getParameter("tipo");
 						int capienza=Integer.parseInt(request.getParameter("capienza"));
 						
-						//System.out.println("Nel metodo dopost di AddImage");
+						
 						Part file=request.getPart("img");
 						
 						String imageFileName=file.getSubmittedFileName();
-						//System.out.println("Immagine selezionata: "+imageFileName);
+						
 						
 						String uploadPath="C:/Users/matte/git/repository/BurnHouse/WebContent/Immagini/"+imageFileName;
-						//System.out.println("Upload Path: "+uploadPath);
+						
 					
 						
 						
@@ -124,15 +123,15 @@ public class ProductControl extends HttpServlet {
 						String tipo = request.getParameter("tipo");
 						int capienza=Integer.parseInt(request.getParameter("capienza"));
 						
-						//System.out.println("Nel metodo dopost di AddImage");
+						
 						Part file=request.getPart("img");
 						
 						
 						String imageFileName=file.getSubmittedFileName();
-						//System.out.println("Immagine selezionata: "+imageFileName);
+						
 						
 						String uploadPath="C:/Users/matte/eclipse-workspace 2023/Burn_House/src/main/webapp/Immagini/"+imageFileName;
-						//System.out.println("Upload Path: "+uploadPath);
+						
 					
 						
 						try {
@@ -168,14 +167,13 @@ public class ProductControl extends HttpServlet {
 				  else if (action.equalsIgnoreCase("filter")) {
 				  		int min =Integer.parseInt( request.getParameter("minGradazione"));
 				  		int max =Integer.parseInt( request.getParameter("maxGradazione"));
-				  		//System.out.println("Min: "+min);
-				  		//System.out.println("Max: "+max);
+				  		
 				  		
 				  		 
 						
 						Collection<ProductBean> filteredProducts = model.doFilter(min, max);
 						request.setAttribute("filteredProducts", filteredProducts);
-						//filteredProducts.forEach(e -> System.out.println(e.getName()+", "+e.getDegree()));
+						
 						
 				  }else if(action.equalsIgnoreCase("sugg")) {
 					  
@@ -189,7 +187,7 @@ public class ProductControl extends HttpServlet {
 				
 			}		
 		} catch (SQLException e) {
-			System.out.println("Error:" + e.getMessage());
+			response.sendRedirect("GeneralError.jsp");
 		}
 		
 		
@@ -199,7 +197,7 @@ public class ProductControl extends HttpServlet {
 			request.removeAttribute("products");
 			request.setAttribute("products", model.doRetrieveAll(sort));
 		} catch (SQLException e) {
-			System.out.println("Error:" + e.getMessage());
+			response.sendRedirect("GeneralError.jsp");
 		}
 
 		RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/ProductView.jsp");
@@ -226,7 +224,7 @@ public class ProductControl extends HttpServlet {
 			response.getWriter().write(json);
 			
 			}catch(Exception e) {
-				
+				response.sendRedirect("GeneralError.jsp");
 			}
 		}else {
 		doGet(request, response);

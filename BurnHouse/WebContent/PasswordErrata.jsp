@@ -9,7 +9,7 @@
 <script type="text/javascript" src="./script/jquery-3.5.1.js"></script>
 <script>
 function validation(obj){
-	var pattern=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	var pattern=/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 
 	if(obj.email.value.match(pattern)){
 		

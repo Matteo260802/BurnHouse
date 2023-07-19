@@ -22,7 +22,7 @@ public class ProductBean implements Serializable{
 		descrizione="";
 		gradazione= -1;
 		tipo= "";
-		//String img=null;
+		
 		capienza=-1;
 	}
 	

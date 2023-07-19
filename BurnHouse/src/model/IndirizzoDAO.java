@@ -15,7 +15,7 @@ import javax.sql.DataSource;
 
 public class IndirizzoDAO {
 	private static DataSource ds;
-	private static final String table_name="indirizzo";
+	private static final String table1_name="indirizzo";
 	private static  final String table2_name="spedizione";
 	
 	static {
@@ -26,7 +26,7 @@ public class IndirizzoDAO {
 			ds = (DataSource) envCtx.lookup("jdbc/burn_house");
 
 		} catch (NamingException e) {
-			System.out.println("Error:" + e.getMessage());
+			System.err.println("Error:" + e.getMessage());
 		}
 	}
 
@@ -34,7 +34,7 @@ public class IndirizzoDAO {
 	public synchronized IndirizzoBean DoRetrieveByKey(String via, String cap, String citta) throws SQLException {
 	    Connection con = null;
 	    PreparedStatement query = null;
-	    String quer = "SELECT * FROM " + IndirizzoDAO.table_name + " WHERE via=? AND cap=? AND citta=?";
+	    String quer = "SELECT * FROM " + IndirizzoDAO.table1_name + " WHERE via=? AND cap=? AND citta=?";
 	    IndirizzoBean ind = new IndirizzoBean();
 
 	    try {
@@ -71,7 +71,7 @@ public class IndirizzoDAO {
 		
 		IndirizzoBean ind=new IndirizzoBean();
 		ArrayList<IndirizzoBean> indirizzi=new ArrayList<IndirizzoBean>();
-		String quer="Select * From "+IndirizzoDAO.table_name+" Order by ?";
+		String quer="Select * From "+IndirizzoDAO.table1_name+" Order by ?";
 		try {
 			con=ds.getConnection();
 			query=con.prepareStatement(quer);
@@ -103,7 +103,7 @@ public class IndirizzoDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		PreparedStatement query2=null;
-		String quer1="INSERT INTO "+IndirizzoDAO.table_name+" Values(?,?,?)";
+		String quer1="INSERT INTO "+IndirizzoDAO.table1_name+" Values(?,?,?)";
 		String quer2="INSERT INTO "+IndirizzoDAO.table2_name+" VALUES(?,?,?,?)";
 		IndirizzoBean ind=new IndirizzoBean();
 		ind=this.DoRetrieveByKey(via, cap, citta);
@@ -114,7 +114,7 @@ public class IndirizzoDAO {
 			query2=con.prepareStatement(quer2);
 			
 			
-			if((via!=null && !via.equals(""))&&(cap!=null && !cap.equals(""))&&(citta!=null && !citta.equals(""))&&(!utente.equals("") && utente!=null)) {
+			if((via!=null && !via.equals(""))&&(cap!=null && !cap.equals(""))&&(citta!=null && !citta.equals(""))&&(utente!=null && !utente.equals(""))) {
 				if(!ind.GetVia().equals(via)||!ind.GetCap().equals(cap)||!ind.GetCitta().equals(citta)) {
 				query.setString(1, via);
 				query.setString(2, cap);
@@ -263,7 +263,7 @@ public class IndirizzoDAO {
 		Connection con=null;
 		PreparedStatement query=null;
 		
-		String quer="DELETE FROM "+IndirizzoDAO.table_name+" WHERE via=? AND cap=? AND citta=?";
+		String quer="DELETE FROM "+IndirizzoDAO.table1_name+" WHERE via=? AND cap=? AND citta=?";
 		try {
 			con=ds.getConnection();
 			query=con.prepareStatement(quer);

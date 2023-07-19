@@ -190,8 +190,7 @@ public class CheckoutServlet extends HttpServlet {
 				
 				
 			} catch (Exception e) {
-				//response.sendRedirect("GeneralError.jsp");
-				System.out.println(e);
+				
 				
 			}
 		}
