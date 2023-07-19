@@ -11,7 +11,7 @@
    <jsp:include page = "Header.jsp"/>
 
    <div id = "page-title">
-      <h2>Condizioni di Vendita</h2>
+      <h1>Condizioni di Vendita</h1>
    </div>
    <div id = "page-body">
    <h1>1. Oggetto</h1>
