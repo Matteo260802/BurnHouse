@@ -15,8 +15,8 @@ import javax.sql.DataSource;
 
 public class IndirizzoDAO {
 	private static DataSource ds;
-	private static  String table_name="indirizzo";
-	private static String table2_name="spedizione";
+	private final static  String table_name="indirizzo";
+	private final static String table2_name="spedizione";
 	
 	static {
 		try {
