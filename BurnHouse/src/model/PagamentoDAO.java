@@ -14,7 +14,7 @@ import javax.sql.DataSource;
 
 public class PagamentoDAO {
 	private static DataSource ds;
-	private static String table_name="pagamento";
+	private static final String table_name="pagamento";
 	
 	static {
 		try {

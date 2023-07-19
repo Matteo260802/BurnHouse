@@ -29,8 +29,8 @@ public class OrderDAO {
 			System.out.println("Error:" + e.getMessage());
 		}
 	}
-	private static String table_name="ordine";
-	private static String table2_name="inclusione";
+	private static  final String table_name="ordine";
+	private static  final String table2_name="inclusione";
 	
 	
 	public synchronized Orderbean DoRetrieveByKey(int codice) throws SQLException{
