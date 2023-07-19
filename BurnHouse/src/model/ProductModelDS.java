@@ -93,18 +93,22 @@ public class ProductModelDS implements ProductModel {
 
 			Collection<ProductBean> products = new LinkedList<ProductBean>();
 
-			String selectSQL = "SELECT * FROM " + ProductModelDS.TABLE_NAME;
+			String selectSQL = "SELECT * FROM " + ProductModelDS.TABLE_NAME + " ORDER BY ?";
 
-			 if (order != null && !order.isEmpty()) {
-			        String validatedOrder = validateOrder(order);
-			        if (validatedOrder != null) {
-			            selectSQL += " ORDER BY " + validatedOrder;
-			        }
-			    }
+			 
 
 		    try {
+
 		        connection = ds.getConnection();
 		        preparedStatement = connection.prepareStatement(selectSQL);
+		        
+		        if (order != null && !order.isEmpty()) {
+			        String validatedOrder = validateOrder(order);
+			        if (validatedOrder != null) {
+			            preparedStatement.setString(1,validatedOrder);
+			            
+			        }
+			    }
 		        
 		        
 				ResultSet rs = preparedStatement.executeQuery();
