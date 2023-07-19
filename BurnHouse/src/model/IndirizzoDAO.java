@@ -34,7 +34,7 @@ public class IndirizzoDAO {
 	public synchronized IndirizzoBean DoRetrieveByKey(String via, String cap, String citta) throws SQLException {
 	    Connection con = null;
 	    PreparedStatement query = null;
-	    String quer = "SELECT * FROM " + IndirizzoDAO.table_name + " WHERE via=? AND cap=? AND citta=?";
+	    String quer = "SELECT * FROM Indirizzo WHERE via=? AND cap=? AND citta=?";
 	    IndirizzoBean ind = new IndirizzoBean();
 
 	    try {
