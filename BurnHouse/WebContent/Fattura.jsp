@@ -90,6 +90,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   %>
   
   <table>
+  <caption>Riepilogo Ordine</caption>
     <tr>
       <th>Numero fattura:</th>
       <td><%=nOrdine %></td>
@@ -113,6 +114,7 @@ pageEncoding="UTF-8" import="java.util.*, model.Orderbean, model.ProductBean"%>
   <h2>Dettagli Fattura</h2>
   
   <table>
+  <caption>Riepilogo Prodotti</caption>
     <tr>
       <th>Prodotto</th>
       <th>Quantità</th>

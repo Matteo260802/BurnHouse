@@ -208,10 +208,9 @@ body{
 	display: flex;
 	justify-content: center;
 	height: 376px;
-	margin-top: 40px;
 	max-width: 1050px;
   	width: 90%;
- 	margin: auto;
+ 	margin: 40px auto auto auto;
 }
 
 .water{

@@ -216,7 +216,7 @@ public class ProductControl extends HttpServlet {
 		if(action.equalsIgnoreCase("ajax")) {
 			try {
 			String find=request.getParameter("find");
-			Collection<String> suggest=(List<String>)model.doRetrieveLikeName(find);
+			Collection<String> suggest=model.doRetrieveLikeName(find);
 			
 			Gson jso=new Gson();
 			String json=jso.toJson(suggest);
