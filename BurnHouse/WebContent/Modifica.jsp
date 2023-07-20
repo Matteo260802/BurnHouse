@@ -60,10 +60,10 @@
 		<input name="gradazione" type="number" step="0.01" min="0" max="100" required><br>
 		
 		<label for="capienza">Capienza:</label><br> 
-		<input name="capienza" type="number" max="150" required ><br> 
+		<input name="capienza" type="number" max="150" required placeholder="cl"><br> 
 		
 		<label for="tipo">Tipo:</label><br> 
-		<input name="tipo" type="text" maxlength="20" required ><br> 
+		<input name="tipo" type="text" maxlength="20" required placeholder="vino, distillato, liquore"><br> 
 		
 		
 		<label for="myfile" class="custom-file-upload">
