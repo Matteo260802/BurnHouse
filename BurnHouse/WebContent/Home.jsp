@@ -7,7 +7,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>BurnHouse</title>
-	<!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">-->
+	
 	<link rel="stylesheet" type="text/css" href="./CSS/HomeStile.css">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +24,7 @@
       <a href="Azienda.jsp" class="button">Maggiori informazioni</a>
     </div>
     
-    <video autoplay muted loop id="video-back">
+    <video autoplay muted loop id="video-back" title="riempibicchiere">
       <source src="${pageContext.request.contextPath}/Immagini/video.mp4" type="video/mp4">
     </video>    
   </div>
@@ -103,6 +103,7 @@
 	%>
 	
 	<!-- linea 1 -->
+	<!-- Vini BEST -->
 	<section class="product1"> 
 	<div class="title-container">
             <h1 class="title">VINI</h1>
@@ -147,7 +148,7 @@
 		</div>
 		<div class="banner__copy">
 			<div class="banner__copy__text">
-				<!--  <h3>Liquori italiani</h3>-->
+				
 			</div>
 		</div>
 	</section>
@@ -159,6 +160,7 @@
 	%>
     
     <!-- linea 2 -->
+    <!-- Liquori BEST -->
     <section class="product2"> 
     <div class="title-container">
             <h1 class="title">LIQUORI</h1>
@@ -206,7 +208,7 @@
 		</div>
 		<div class="banner__copy">
 			<div class="banner__copy__text">
-				<!--  <h3>Distillati italiani</h3>-->
+				
 			</div>
 		</div>
 	</section>
@@ -217,6 +219,7 @@
 	%>
 	
 	<!-- linea 3 -->
+	<!-- Disitillati BEST -->
 	<section class="product3"> 
 	<div class="title-container">
             <h1 class="title">DISTILLATI</h1>

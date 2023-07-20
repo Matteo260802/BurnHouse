@@ -38,7 +38,7 @@
 
 
 
-<!-- eventuale chiusura </head>, apertura <body> -->
+
 <div class="totole">
  <div class="nav-container">
             <input class="checkbox" type="checkbox" name="" id="" />

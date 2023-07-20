@@ -142,17 +142,12 @@ div.fattura a:hover {
   margin-right: 10px;
 }
 
-.about {
-  flex-grow: 1; /* Permette al testo di espandersi e occupare lo spazio rimanente */
-  font-size: 20px;
-  color: black;
-  font-family: 'Montserrat', sans-serif;
-}
+
 
 
 /*sotto*/
 .order-total {
-  width:65%;;
+  width:65%;
   margin: 0 auto;
   border-top-style: solid;
   border-top-width: 3px;
@@ -214,6 +209,9 @@ body{
 	justify-content: center;
 	height: 376px;
 	margin-top: 40px;
+	max-width: 1050px;
+  	width: 90%;
+ 	margin: auto;
 }
 
 .water{
@@ -490,26 +488,11 @@ h1#riempi{
 
 /*bottone prova*/
     /* COLORS */
-.container {
-  max-width: 1050px;
-  width: 90%;
-  margin: auto;
-}
+
 
 .navbar {
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 62px;
-}
-
-.navbar .menu-items {
-  display: flex;
 }
 
 .navbar .nav-container li {
